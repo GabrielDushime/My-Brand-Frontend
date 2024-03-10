@@ -1,0 +1,270 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    position: realtive;
+    width: 100%;
+    background-color:#1B1B1B;
+}
+@media screen and (min-width:541px)
+{
+    .sidenav{ display:none;}
+    span{display: none;}
+}
+header{
+    position: relative;
+    display:flex;
+    justify-content: space-around;
+}
+.logo img{
+    position:absolute;
+    height:50px;
+    width:50px;
+    border-radius:50px;
+    left:0px;
+    margin-left:50px;
+    margin-top:10px;
+}
+.nav{
+    
+    display:block; 
+    margin:30px;
+
+}
+.nav ul{
+    position: absolute;
+    display:flex;
+    justify-content: space-around;
+    right:8rem;
+ 
+}
+.nav li{
+    list-style-type:none;
+    font-size:15px;
+    font-family:poppins;
+    margin: 0 0 0 60px;
+
+}
+.nav a{
+    color:white;
+    text-decoration:none;
+    text-transform:none;
+}
+.nav a:hover{
+    background-color:#4D5D53;
+}
+hr{
+float: right;
+width:40.5rem;
+margin-right:8rem;
+}
+
+#hr{
+    margin-top:22px;
+    width:100%;
+    margin-right:0px;
+}
+#back{
+    position: absolute;
+    right:30px;
+    margin-right:10px;
+    border-radius:5px;
+    background-color:white;
+    color: black;
+    width:80px;
+    height: 40px;
+    margin-top:40px;
+    cursor: pointer;
+    font-family:poppins;
+    font-weight: bold;
+    border: none;
+} 
+#back:hover{
+    background-color:#4D5D53;
+}
+h2{
+    color: white;
+    text-align: center;
+    margin-top:30px;
+    margin-left:-28px;
+}
+.form {
+    width: 300px;
+    padding:20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top:20px;
+    float: right;
+    margin-right:450px;
+    
+   
+  }
+  fieldset {
+    border: none;
+    justify-content: center;
+  }
+  legend {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: poppins;
+  }
+
+
+  #name{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: poppins;
+  }
+  label{
+    font-family: poppins;
+  }
+  placeholder{
+    font-family: poppins;
+  }
+  #email{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: poppins;
+  }
+  #message{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    height: 100px;
+  }
+
+  #submit{
+    background-color: #1B1B1B;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius:6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: poppins;
+    
+  }
+  #submit:hover{
+    background-color:#4D5D53;
+  }
+ 
+
+
+  .footer{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    background-color:black;
+    height:100px;
+    width:100%;
+    bottom:20px;
+    margin-top:32rem;
+}
+.copyright{
+    position: absolute;
+    bottom:-20px;
+    color: white;
+    font-family: poppins;
+
+}
+
+.quicklink{
+    margin-top:15px;
+    font-size:12px;
+}
+.quicklink h{
+    margin-left:80px;
+}
+.quicklink ul{
+    position: absolute;
+    display: flex;
+    list-style-type:none;
+    justify-content: space-between;
+    margin-top:20px;
+    left:30px;
+    
+   
+}
+.quicklink li{
+    
+    font-family:poppins;
+    margin-right:30px;
+    
+}
+.quicklink a{
+    text-decoration: none;
+    text-transform: none;
+    color:white;
+}
+.quicklink a:hover{
+    background-color:#4D5D53;
+}
+.quicklink h{
+    color:white;
+    font-family:poppins;
+    font-weight: bold; 
+}
+.contact{
+    color:white;
+    margin-top:15px;
+    font-family:poppins;
+    margin-left:150px;
+    font-size:12px;
+}
+.contact h{
+    font-weight: bold;
+    margin-left:50px;
+}
+.contact p{
+   margin-top:3px;
+}
+.social{
+    margin-top:15px;
+ 
+}
+.social h{
+    margin-left: 50px;
+    color: white;
+    font-family:poppins;
+    font-size:12px;
+}
+.fa{
+    
+ margin-top:10px;
+ padding:3px;
+ font-size:20px;
+ width:20px;
+ text-align: center;
+ text-decoration: none;
+ background:white;
+ color:black;
+ border-radius:100px;
+ margin-left:10px;
+}
+.fa:hover{
+    background-color:#4D5D53;
+}
+#hr1{
+    position: absolute;
+    bottom:-30px;
+    margin-right:0px;
+    margin-bottom:30px;
+}
