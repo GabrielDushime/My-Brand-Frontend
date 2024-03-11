@@ -11,6 +11,10 @@
         <script src="./Blogs.js"></script>
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+       
     </head>
     <body>
         <header>
@@ -27,7 +31,8 @@
                     <li><a href="./Portofolio.html">Portofolio</a></li> 
                 </ul>
             </div> 
-            <div class="sidenav">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="./Home.html">Home</a></li>
                 <a href="./About.html">About Me</a>
                 <a href="./Contact.html">Contact Me</a>
@@ -41,54 +46,44 @@
 
         </header>
         <hr>
-        <div class="card1">
-        <div class="card">
-            <div class="card1">
-               <img src="./Images/Blog a.jpg" alt="Card Image">
-                <div class="card-content">
-                   <h2>Coding</h2>
-                    <p>
-                    This is the card content. You can add any text or other elements here.
-                    </p>
-                    <button class="card-button" ><a href="./Card1.html">Read More</a></button>
-                    <i onclick="like(this)" class="fa fa-thumbs-up" id="like"></i>
-                     <i onclick="dislike(this)" class="fa fa-thumbs-down" id="dislike"></i>
-                    <i class="material-icons" style="font-size:16px" id="comment">sms</i>
-                </div>
-            </div>
-       </div>
-       
-       <div class="card">
-        <div class="card1">
-           <img src="./Images/Blog b.jpg" alt="Card Image">
-            <div class="card-content">
-               <h2>Coding</h2>
-                <p>
-                This is the card content. You can add any text or other elements here.
-                </p>
-                <button class="card-button" ><a href="./Card1.html">Read More</a></button>
-                <i onclick="like(this)" class="fa fa-thumbs-up" id="like"></i>
-                <i onclick="dislike(this)" class="fa fa-thumbs-down" id="dislike"></i>
-                <i class="material-icons" style="font-size:16px" id="comment">sms</i>
-            </div>
+        <div class="card" id="c0">
+            <img src="./Images/Blog a.jpg" alt="Blog Post Image">
+            <h2>Blog Title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac justo id libero tincidunt aliquet.</p>
+            <a href="./Card1.html">Read More</a>
+            
         </div>
-   </div>
-   <div class="card">
-    <div class="card1">
-       <img src="./Images/Blog a.jpg" alt="Card Image">
-        <div class="card-content">
-           <h2>Coding</h2>
-            <p>
-            This is the card content. You can add any text or other elements here.
-            </p>
-            <button class="card-button" ><a href="./Card1.html">Read More</a></button>
-            <i onclick="like(this)" class="fa fa-thumbs-up" id="like"></i>
-            <i onclick="dislike(this)" class="fa fa-thumbs-down" id="dislike"></i>
-            <i class="material-icons" style="font-size:16px" id="comment">sms</i>
+        <div class="card" id="c1">
+            <img src="./Images/Blog b.jpg" alt="Blog Post Image">
+            <h2>Blog Title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac justo id libero tincidunt aliquet.</p>
+            <a href="./Card2.html">Read More</a>
         </div>
-    </div>
-</div>
-</div>
+        <div class="card" id="c2">
+            <img src="./Images/Blog d.jpg" alt="Blog Post Image">
+            <h2>Blog Title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac justo id libero tincidunt aliquet.</p>
+            <a href="Card3.html">Read More</a>
+        </div>
+        <div class="card" id="c3">
+            <img src="./Images/Blog e.jpg" alt="Blog Post Image">
+            <h2>Blog Title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac justo id libero tincidunt aliquet.</p>
+            <a href="Card4.html">Read More</a>
+        </div>
+        <div class="card" id="c4">
+            <img src="./Images/Blog c.jpg" alt="Blog Post Image">
+            <h2>Blog Title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac justo id libero tincidunt aliquet.</p>
+            <a href="Card5.html">Read More</a>
+        </div>
+        <div class="card" id="c5">
+            <img src="./Images/Blog f.jpeg" alt="Blog Post Image">
+            <h2>Blog Title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac justo id libero tincidunt aliquet.</p>
+            <a href="Card6.html">Read More</a>
+        </div>
+        
             
             
         
