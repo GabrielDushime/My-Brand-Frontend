@@ -72,6 +72,26 @@ margin-right:8rem;
     float: right;
     margin-right:450px;
   }
+  #password-error{
+    font-size:16px;
+    font-weight: bold;
+   }
+   #cpassword-error{
+    font-size:16px;
+    font-weight: bold;
+   }
+   #fname-error{
+    font-size:16px;
+    font-weight: bold;
+   }
+   #lname-error{
+    font-size:16px;
+    font-weight: bold;
+   }
+   #matchpasscode-error{
+    font-size:16px;
+    font-weight: bold;
+   }
   legend{
     font-family: poppins;
     font-size:14px;

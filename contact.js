@@ -23,24 +23,27 @@ function validateForm() {
     let message = document.getElementById("message").value;
     if (name === "")
      {
-        alert("First Name must be filled out!");
+      document.getElementById("username-error").style.display = "inline";
         return false;
      }
    
      if(email  === "" || !email.includes('@'))
      {
-       alert("Please Enter your Email!");
+      document.getElementById("email-error").style.display = "inline";
        return false;
      
      }
       if (message === "")
      {
-        alert("Please write your Message!");
+      document.getElementById("message-error").style.display = "inline";
         return false;
      }
     
     {
         return true;
+        
+        
      }
+     
     
 }

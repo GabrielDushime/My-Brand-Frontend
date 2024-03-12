@@ -166,8 +166,18 @@ h2{
   #submit:hover{
     background-color:#4D5D53;
   }
- 
-
+ #email-error{
+  font-size:16px;
+  font-weight: bold;
+ }
+ #username-error{
+  font-size:16px;
+  font-weight: bold;
+ }
+ #message-error{
+  font-size:16px;
+  font-weight: bold;
+ }
 
   .footer{
     position: relative;

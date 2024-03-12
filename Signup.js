@@ -26,45 +26,39 @@ function validateForm() {
    
     if (fname === "")
     {
-       alert("First Name must be filled out!");
+        document.getElementById("fname-error").style.display = "inline";
        return false;
     }
     if (lname === "")
     {
-       alert("Last Name must be filled out!");
+        document.getElementById("lname-error").style.display = "inline";
        return false;
     }
      if(email  === "" || !email.includes('@'))
     {
-       alert("Please Enter your Email!");
+        document.getElementById("email-error").style.display = "inline";
        return false;
      
      }
     if (password === "")
     {
-        alert("Please Enter your Passcode!");
+        document.getElementById("password-error").style.display = "inline";
         return false;
     }
   
     
     if (cpassword === "")
     {
-        alert("Confirm Your Passcode!");
+        document.getElementById("cpassword-error").style.display = "inline";
         return false;
     }
     
     if (cpassword !== password)
     {
-       alert("Password does not much!");
+        document.getElementById("matchpasscode-error").style.display = "inline";
        return false;
     }
-    if(password.length <8)
-    {
   
-        alert("Password Must be at least 8 character");
-        return false;
-    }
-
     {
         return true;
     }

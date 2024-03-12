@@ -50,10 +50,13 @@
                 <fieldset>
                     <legend>Leave us your message!</legend>
                     <label for="name">Your full Name:</label>
+                    <span id="username-error" style="color: red; display: none ;font-size:10px">Please Enter Your Full Name!</span>
                     <input type="text" id="name" name="name" >
                     <label for="email">Your Email:</label>
+                    <span id="email-error" style="color: red; display: none ;font-size:10px">Email is Required!</span>
                     <input type="email" id="email" name="email" >
                     <label for="message"> Your Message:</label>
+                    <span id="message-error" style="color: red; display: none ;font-size:10px">Please Leave Us Your Message!</span>
                     <textarea id="message" name="message" rows="4" cols="50" placeholder="Type your message...."></textarea>
                     <input type="submit" value="Send Your Message" id="submit">
                 </fieldset>
