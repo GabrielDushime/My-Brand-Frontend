@@ -189,6 +189,49 @@ a:hover{
     bottom:0px;
     margin-bottom:-50px;
   }
+  /*popup message*/
+  .popup{
+    position: absolute;
+    background-color: #fff;
+    width:200px;
+    border-radius:15px;
+    right: 0PX;
+    margin-right:230PX;
+    margin-top:16PX;
+    height:150px;
+  
+    
+  }
+  .popup img{
+    height: 30px;
+    width:30px;
+    align-items: center;
+    justify-content: center;
+    padding-left:85px;
+    margin-top:5px;
+  }
+  .popup h2{
+    margin-top:0px;
+    text-align: center;
+    margin-left:10px;
+  }
+  .popup p{
+    margin-top:15px;
+    text-align: center;
+    font-size:13px;
+  }
+  .popup button{
+    width:90%;
+  border-radius:5px;
+  margin-top:25px;
+  margin-left:10px;
+  font-size:15px;
+  font-weight: 600;
+  color: #fff;
+  background-color: rgb(49, 130, 49);
+  border: 0;
+  cursor: pointer;
+  }
   .footer{
     position: absolute;
     display: flex;

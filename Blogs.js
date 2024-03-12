@@ -20,3 +20,33 @@ function closeNav()
 
 /*Copyright*/
 document.getElementById("current-year").textContent = new Date().getFullYear();
+
+/*Like icon*/
+ // Initial like count and liked state
+ var likeCount = 0;
+ var liked = false;
+
+ // Function to update like count and button text
+ function updateLike() {
+   if (liked) {
+     likeCount--;
+     liked = false;
+   } else {
+     likeCount++;
+     liked = true;
+   }
+   document.getElementById("like-num").innerText = likeCount;
+ }
+
+ // Add event listener to the like button
+ document.getElementById("like").addEventListener("click", function() {
+   // Toggle like and update count
+   updateLike();
+
+   // Update button text
+   if (liked) {
+     document.getElementById("like").innerText = "Unlike";
+   } else {
+     document.getElementById("like").innerText = "Like";
+   }
+ });

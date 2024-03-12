@@ -46,7 +46,7 @@
         </div>
         <div class="form">
            
-            <form name="contact-form" action="/submit" onsubmit="return validateForm()" method="post">
+            <form name="contact-form" action="/submit" onsubmit="return validateForm()"method="post">
                 <fieldset>
                     <legend>Leave us your message!</legend>
                     <label for="name">Your full Name:</label>
@@ -58,10 +58,18 @@
                     <label for="message"> Your Message:</label>
                     <span id="message-error" style="color: red; display: none ;font-size:10px">Please Leave Us Your Message!</span>
                     <textarea id="message" name="message" rows="4" cols="50" placeholder="Type your message...."></textarea>
-                    <input type="submit" value="Send Your Message" id="submit">
+                    <input type="submit" value="Send Your Message" id="submit" onclick="openpopup()">
                 </fieldset>
 
             </form>
+        </div>
+        <div class="Message-pop">
+            <div class="popup">
+                <img src="./Images/check.png">
+                <h2 id="ht">Thank you</h2>
+                <p>Your Message sent Successfully!</p>
+                <button type="ok" onclick="closepopup()">Ok</button>
+            </div>
         </div>
         <hr id="hr"> 
         <footer>

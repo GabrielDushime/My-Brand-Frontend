@@ -8,6 +8,8 @@ body{
     background-color:#1B1B1B;
     font-size: 12px;
 }
+
+
 @media screen and (min-width:541px)
 {
     .sidenav{ display:none;}
@@ -61,6 +63,10 @@ width:41rem;
 margin-right:8rem;
 }
 
+#like {
+    color: #007bff;
+    cursor: pointer;
+  }
 .card {
     background-color: #ffffff;
     border-radius: 8px;
@@ -69,7 +75,7 @@ margin-right:8rem;
     margin: 20px;
     flex: 1; 
     max-width: 300px; 
-    height:350px;
+    height:360px;
 }
 
 img {
