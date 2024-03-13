@@ -7,10 +7,7 @@ body{
     width: 100%;
     height:max-content;
     background-color:#1B1B1B;
-<<<<<<< HEAD
     font-size: 12px;
-=======
->>>>>>> d0d7b2a (initial commit)
 }
 @media screen and (min-width:541px)
 {
@@ -85,11 +82,8 @@ p{
     margin-right:60px;
 }
 #cap{
-<<<<<<< HEAD
     width:90%;
-=======
     width:50%;
->>>>>>> d0d7b2a (initial commit)
     margin-top:5px;
     color: white;
     font-family:poppins;
@@ -99,11 +93,8 @@ p{
     width:99.8%;
     margin-right:0px;
     bottom:0px;
-<<<<<<< HEAD
     margin-bottom:30px;
-=======
-    margin-bottom:-35px;
->>>>>>> d0d7b2a (initial commit)
+    
   }
 .footer{
     position: absolute;
@@ -205,7 +196,6 @@ p{
     bottom:-30px;
     margin-right:0px;
     margin-bottom:30px;
-<<<<<<< HEAD
 }
 
 /* Madia Querries*/
@@ -413,6 +403,4 @@ body{
 }
 
 
-=======
->>>>>>> d0d7b2a (initial commit)
 }

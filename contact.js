@@ -23,37 +23,24 @@ function validateForm() {
     let message = document.getElementById("message").value;
     if (name === "")
      {
-<<<<<<< HEAD
       document.getElementById("username-error").style.display = "inline";
-=======
-        alert("First Name must be filled out!");
->>>>>>> d0d7b2a (initial commit)
         return false;
      }
    
      if(email  === "" || !email.includes('@'))
      {
-<<<<<<< HEAD
       document.getElementById("email-error").style.display = "inline";
-=======
-       alert("Please Enter your Email!");
->>>>>>> d0d7b2a (initial commit)
        return false;
      
      }
       if (message === "")
      {
-<<<<<<< HEAD
       document.getElementById("message-error").style.display = "inline";
-=======
-        alert("Please write your Message!");
->>>>>>> d0d7b2a (initial commit)
         return false;
      }
     
     {
         return true;
-<<<<<<< HEAD
         
         
      }
@@ -69,8 +56,4 @@ function openpopup()
 function closepopup()
 {
     popup.classList.remove("open-popup");
-=======
-     }
-    
->>>>>>> d0d7b2a (initial commit)
 }

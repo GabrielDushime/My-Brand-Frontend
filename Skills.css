@@ -6,10 +6,7 @@ body{
     position: realtive;
     width: 100%;
     background-color:#1B1B1B;
-<<<<<<< HEAD
     font-size: 12px;
-=======
->>>>>>> d0d7b2a (initial commit)
 }
 @media screen and (min-width:541px)
 {
@@ -233,7 +230,6 @@ h4{
     bottom:-30px;
     margin-right:0px;
     margin-bottom:30px;
-<<<<<<< HEAD
 }
 
 /* Madia Querries*/
@@ -581,6 +577,4 @@ h2{
     font-size:15px;
    
 }
-=======
->>>>>>> d0d7b2a (initial commit)
 }

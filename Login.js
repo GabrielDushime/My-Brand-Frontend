@@ -23,21 +23,13 @@ function validateForm() {
    
      if(email  === "" || !email.includes('@'))
     {
-<<<<<<< HEAD
         document.getElementById("email-error").style.display = "inline";
-=======
-       alert("Please Enter your Email!");
->>>>>>> d0d7b2a (initial commit)
        return false;
      
      }
     if (password === "")
     {
-<<<<<<< HEAD
         document.getElementById("password-error").style.display = "inline";
-=======
-        alert("Please Enter your Passcode!");
->>>>>>> d0d7b2a (initial commit)
         return false;
     }
 
