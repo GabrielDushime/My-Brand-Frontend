@@ -6,7 +6,10 @@ body{
     position: realtive;
     width: 100%;
     background-color:#1B1B1B;
+<<<<<<< HEAD
     font-size: 12px;
+=======
+>>>>>>> d0d7b2a (initial commit)
 }
 @media screen and (min-width:541px)
 {
@@ -72,6 +75,7 @@ margin-right:8rem;
     float: right;
     margin-right:450px;
   }
+<<<<<<< HEAD
   #password-error{
     font-size:16px;
     font-weight: bold;
@@ -92,6 +96,8 @@ margin-right:8rem;
     font-size:16px;
     font-weight: bold;
    }
+=======
+>>>>>>> d0d7b2a (initial commit)
   legend{
     font-family: poppins;
     font-size:14px;
@@ -189,6 +195,7 @@ a:hover{
     bottom:0px;
     margin-bottom:-50px;
   }
+<<<<<<< HEAD
   /*popup message*/
   .popup{
     position: absolute;
@@ -232,6 +239,8 @@ a:hover{
   border: 0;
   cursor: pointer;
   }
+=======
+>>>>>>> d0d7b2a (initial commit)
   .footer{
     position: absolute;
     display: flex;
@@ -331,6 +340,7 @@ a:hover{
     bottom:-30px;
     margin-right:0px;
     margin-bottom:30px;
+<<<<<<< HEAD
 }
 
 /* Madia Querries*/
@@ -717,4 +727,6 @@ span{
        
     } 
  
+=======
+>>>>>>> d0d7b2a (initial commit)
 }

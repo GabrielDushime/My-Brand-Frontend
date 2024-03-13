@@ -7,7 +7,10 @@ body{
     width: 100%;
     height:max-content;
     background-color:#1B1B1B;
+<<<<<<< HEAD
     font-size: 12px;
+=======
+>>>>>>> d0d7b2a (initial commit)
 }
 @media screen and (min-width:541px)
 {
@@ -84,6 +87,7 @@ h2{
     font-family: poppins;
     color: white;
 }
+<<<<<<< HEAD
 #email-error{
   font-size:16px;
   font-weight: bold;
@@ -92,6 +96,8 @@ h2{
   font-size:16px;
   font-weight: bold;
  }
+=======
+>>>>>>> d0d7b2a (initial commit)
 .form {
     width: 300px;
     padding:20px;
@@ -107,11 +113,14 @@ h2{
     border: none;
     justify-content: center;
   }
+<<<<<<< HEAD
   legend{
     font-family: poppins;
     font-size:25px;
     color:#4D5D53;
   }
+=======
+>>>>>>> d0d7b2a (initial commit)
   #email{
     width: 100%;
     padding: 10px;
@@ -147,7 +156,10 @@ h2{
   #logbutton:hover{
     background-color:#4D5D53;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> d0d7b2a (initial commit)
   p{
     font-family:poppins;
     margin-top:15px;
@@ -184,6 +196,7 @@ h2{
     bottom:0px;
     margin-bottom:75px;
   }
+<<<<<<< HEAD
   /*popup message*/
   .popup{
     position: absolute;
@@ -227,6 +240,8 @@ h2{
   border: 0;
   cursor: pointer;
   }
+=======
+>>>>>>> d0d7b2a (initial commit)
   .footer{
     position: absolute;
     display: flex;
@@ -326,6 +341,7 @@ h2{
     bottom:-30px;
     margin-right:0px;
     margin-bottom:30px;
+<<<<<<< HEAD
 }
 
 /* Madia Querries*/
@@ -688,3 +704,6 @@ span{
 }
 
 
+=======
+}
+>>>>>>> d0d7b2a (initial commit)

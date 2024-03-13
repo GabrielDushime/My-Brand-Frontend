@@ -5,8 +5,12 @@
 body{
     position: realtive;
     width: 100%;
+<<<<<<< HEAD
     background-image: url('./Images/R\ \(2\).jpeg');
     font-size: 12px;
+=======
+    background-color:#1B1B1B;
+>>>>>>> d0d7b2a (initial commit)
 }
 @media screen and (min-width:541px)
 {
@@ -62,7 +66,11 @@ margin-right:8rem;
 }
 
 #hr{
+<<<<<<< HEAD
     margin-top:33px;
+=======
+    margin-top:22px;
+>>>>>>> d0d7b2a (initial commit)
     width:100%;
     margin-right:0px;
 }
@@ -166,6 +174,7 @@ h2{
   #submit:hover{
     background-color:#4D5D53;
   }
+<<<<<<< HEAD
  #email-error{
   font-size:16px;
   font-weight: bold;
@@ -178,6 +187,10 @@ h2{
   font-size:16px;
   font-weight: bold;
  }
+=======
+ 
+
+>>>>>>> d0d7b2a (initial commit)
 
   .footer{
     position: relative;
@@ -278,6 +291,7 @@ h2{
     bottom:-30px;
     margin-right:0px;
     margin-bottom:30px;
+<<<<<<< HEAD
 }
 /*Pop up Message*/
 
@@ -726,3 +740,6 @@ span{
     } 
 }
 
+=======
+}
+>>>>>>> d0d7b2a (initial commit)

@@ -10,6 +10,7 @@ function closeNav()
 }
 
 /*Copyright*/
+<<<<<<< HEAD
 document.getElementById("current-year").textContent = new Date().getFullYear();
 
 
@@ -64,3 +65,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     };
 });
+=======
+document.getElementById("current-year").textContent = new Date().getFullYear();
+>>>>>>> d0d7b2a (initial commit)
