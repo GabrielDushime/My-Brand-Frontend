@@ -52,9 +52,9 @@ header{
     text-decoration:none;
     text-transform:none;
 }
-.nav a:hover{
+/* .nav a:hover{
     background-color:#4D5D53;
-}
+} */
 hr{
 float: right;
 width:32rem;

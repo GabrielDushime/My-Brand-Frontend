@@ -8,7 +8,79 @@ body{
     background-color:#1B1B1B;
     font-size: 12px;
 }
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height:200px;
+    perspective: 1000px;
+    cursor:pointer;
+    display: flex;
+    padding-left:20px;
+  }
+  .flip-card img{
+    border-radius: 30px;
+    height: 100px;
+  }
+  
+  .flip-card-inner {
+    position:relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius:30px;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color:#555;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .flip-card-back h2{
+    color: white;
+    font-family: poppins;
+    margin-top:10px;
+    
+      }
+      .flip-card-back a{
+        color: rgb(211, 154, 154);
+        text-decoration:none;
+        font-family: poppins;
+        font-size:20px;
+        
+      
+      } 
+      .flip-card-back p{
+        font-family: poppins;
+        margin-top:30px;
+      } 
 
+
+  .flip-card-back a:hover{
+        background-color:#818181;
+}
+  
+              
+     
 
 @media screen and (min-width:541px)
 {
@@ -63,64 +135,7 @@ width:41rem;
 margin-right:8rem;
 }
 
-#like {
-    color: #007bff;
-    cursor: pointer;
-  }
-.card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px;
-    flex: 1; 
-    max-width: 300px; 
-    height:360px;
-}
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-h2 {
-    font-size: 1.5rem;
-    margin: 10px 0;
-}
-
-p {
-    font-size: 1rem;
-    color: #555;
-}
-.card a{
-    font-size:15px;
-}
-a {
-    text-decoration: none;
-    color: #007bff;
-
-}
-#c1{
-    float: right;
-    margin-top:-410px;
-}
-#c0{
-  
-    margin-top:50px;
-}
-#c2{
-    margin-left:430px;
-    margin-top:-410px;
-}
-#c4{
-   
-    margin-top:-410px;
-    float: right;
-}
-#c5{
-    margin-left:430px;
-    margin-top:-410px;
-}
 .fa{
     
     padding-right:300px;
