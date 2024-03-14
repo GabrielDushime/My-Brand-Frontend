@@ -54,29 +54,38 @@ body{
     background-color:#555;
     color: white;
     transform: rotateY(180deg);
+    height:305px;
+    background-color: #004225;
   }
+  .flip-card-back img{
+    border-radius: 30px 30px 0 0;
+  }
+  
   .flip-card-back h2{
-    color: white;
+    color: #1B1B1B;
     font-family: poppins;
-    margin-top:10px;
+    margin-top:0px;
     
       }
       .flip-card-back a{
-        color: rgb(211, 154, 154);
+        color:#F04A00;
         text-decoration:none;
         font-family: poppins;
-        font-size:20px;
+        font-size:15px;
+        transition:font-size 1s;
+        
         
       
       } 
       .flip-card-back p{
         font-family: poppins;
-        margin-top:30px;
+       
       } 
 
 
   .flip-card-back a:hover{
-        background-color:#818181;
+    font-size:20px;
+    font-weight: bold;
 }
   
               
@@ -118,16 +127,18 @@ header{
     list-style-type:none;
     font-size:15px;
     font-family:poppins;
-    margin: 0 0 0 60px;
+    margin: 0 0 0 30px;
 
 }
 .nav a{
     color:white;
     text-decoration:none;
     text-transform:none;
+    transition: font-size 1s;
 }
 .nav a:hover{
-    background-color:#4D5D53;
+    color:  #F04A00;
+    font-size:20px;
 }
 hr{
 float: right;
@@ -143,30 +154,19 @@ margin-right:8rem;
 
 
 
-#hr{
-    position: absolute;
-    width:99.8%;
-    margin-right:0px;
-    bottom:0px;
-    margin-bottom:-400px;
-  }
+
   .footer{
     position: absolute;
     display: flex;
     justify-content: space-around;
     background-color:black;
     height:100px;
-    bottom:-500px;
+    bottom:0px;
     width:100%;
+    border-radius: 0 0 100px 100px;
    
 }
-.copyright{
-    position: absolute;
-    bottom:-25px;
-    color: white;
-    font-family: poppins;
 
-}
 
 .quicklink{
     margin-top:15px;
@@ -195,9 +195,11 @@ margin-right:8rem;
     text-decoration: none;
     text-transform: none;
     color:white;
+    transition: font-size 1s;
 }
 .quicklink a:hover{
-    background-color:#4D5D53;
+    color: #F04A00;
+    font-size: 20px;
 }
 .quicklink h{
     color:white;
@@ -237,19 +239,14 @@ margin-right:8rem;
  text-align: center;
  text-decoration: none;
  background:white;
- color:black;
+ color:#4D5D53;
  border-radius:100px;
  margin-left:10px;
 }
 .fa:hover{
-    background-color:#4D5D53;
+  background-color: #F04A00;
 }
-#hr1{
-    position: absolute;
-    bottom:-30px;
-    margin-right:0px;
-    margin-bottom:30px;
-}
+
 /* Madia Querries*/
 @media screen and (max-width:541px)
 {

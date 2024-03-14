@@ -44,16 +44,18 @@ header{
   list-style-type:none;
   font-size:15px;
   font-family:poppins;
-  margin: 0 0 0 60px;
+  margin: 0 0 0 30px;
 
 }
 .nav a{
   color:white;
   text-decoration:none;
   text-transform:none;
+  transition: font-size 1s;
 }
 .nav a:hover{
-  background-color:#4D5D53;
+ color: #F04A00;
+  font-size: 20px;
 }
 hr{
 float: right;
@@ -80,9 +82,11 @@ margin-right:8rem;
   font-family:poppins;
   font-weight: bold;
   border: none;
+  transition:font-size 1s;
 } 
 #back:hover{
-  background-color:#4D5D53;
+  background-color:#F04A00;
+  font-size: 20px;
 }
 h2{
   color: white;
@@ -153,7 +157,7 @@ textarea {
 }
 
 #submit{
-  background-color: #1B1B1B;
+  background-color:#4D5D53;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -161,10 +165,13 @@ textarea {
   cursor: pointer;
   font-size: 16px;
   font-family: poppins;
+  width:100%;
+  transition: font-size 1s;
   
 }
 #submit:hover{
-  background-color:#4D5D53;
+background-color: #F04A00;
+font-size: 20px;
 }
 #email-error{
 font-size:16px;
@@ -180,22 +187,17 @@ font-weight: bold;
 }
 
 .footer{
-  position: relative;
+  position:absolute;
   display: flex;
   justify-content: space-around;
   background-color:black;
   height:100px;
   width:100%;
-  bottom:20px;
-  margin-top:32rem;
+  bottom:0px;
+  top:35rem;
+  border-radius: 0 0 100px 100px;
 }
-.copyright{
-  position: absolute;
-  bottom:-20px;
-  color: white;
-  font-family: poppins;
 
-}
 
 .quicklink{
   margin-top:15px;
@@ -224,9 +226,11 @@ font-weight: bold;
   text-decoration: none;
   text-transform: none;
   color:white;
+  transition: font-size 1s;
 }
 .quicklink a:hover{
-  background-color:#4D5D53;
+  color: #F04A00;
+  font-size: 20px;
 }
 .quicklink h{
   color:white;
@@ -266,19 +270,14 @@ width:20px;
 text-align: center;
 text-decoration: none;
 background:white;
-color:black;
+color:#4D5D53;
 border-radius:100px;
 margin-left:10px;
 }
 .fa:hover{
-  background-color:#4D5D53;
+ background-color: #F04A00;
 }
-#hr1{
-  position: absolute;
-  bottom:-30px;
-  margin-right:0px;
-  margin-bottom:30px;
-}
+
 /*Pop up Message*/
 
 

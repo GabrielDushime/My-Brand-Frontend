@@ -3,23 +3,31 @@
     padding:0px;
 }
 body{
-  background-image: url('./Images/R\ \(2\).jpeg');
+  background-color:#1B1B1B;
     width: 100%;
     position: relative;
+}
+#logo{
+  position: absolute;
+  top:10px;
+  border-radius:50px;
+  left:50px;
+  bottom: 20px;
 }
 
 .vl {
     border-left: 2px solid white;
     height:597px;
-    margin-left:200px;
+    margin-left:180px;
     margin-top:0px;
   }
   header{
     position: absolute;
     display: block;
     justify-content:space-evenly;
-    top:15px;
+    top:80px;
     left:70px;
+    font-size: 15px;
    
   }
   header img{
@@ -27,29 +35,23 @@ body{
     margin-left:-10px;
 
   }
-    
-  header figcaption{
-  
-    font-family:poppins;
-    font-size:15px;
-   margin-left:-20px;
-    font-weight: 500;
-    color: white;
-  }
-  hr{
-    width:200px;
-    margin-left:-70px;
-    border-color:rgb(178, 59, 16);
-    border-radius:2px;
-    
-  }
-  #hr{
+  figcaption{
     position: absolute;
-    bottom:120px;
-    width:270px;
-    
-
+    font-family: poppins;
+    font-size: 12px;
+    color: white;
+    left:-50px;
   }
+  #fig img{
+    border-radius:50px;
+  }
+  #fig{
+    position: absolute;
+    bottom:80px;
+    left:60px;
+  }
+
+  
   .nav a{
     color:white;
     text-decoration: none;
@@ -57,6 +59,7 @@ body{
     text-transform:none;
     font-family: poppins;
     position: relative;
+    transition: font-size 1s;
    
 
   }
@@ -73,9 +76,10 @@ body{
     .nav a:hover:after{
         width:100%;
     }
-  /* .nav a:hover{
-   background-color: darkgray;
-  } */
+  .nav a:hover{
+   font-size:20px;
+   color:rgb(227, 109, 66);
+  }
   .nav li{
    
     list-style-type:none;
@@ -88,11 +92,7 @@ body{
     margin:30px 0 0 0;
   }
 
-  header figcaption a{
-    text-decoration: none;
-    color: white;
-    font-family: poppins;
-  }
+ 
   .Checker{
     position: absolute;
     display:flex;
@@ -187,12 +187,17 @@ body{
  }
  #logout{
     position: absolute;
-    top:530px;
-    left:35px;
+    top:550px;
+    left:20px;
     color:#E3DAC9;
-    font-size: 30px;
-    
+    font-size: 20px;
  }
  span{
     font-family:poppins;
+    transition: font-size 1s;
  }
+ span:hover{
+  color:#F04A00;
+  font-size: 20px; ;
+ }
+ 
