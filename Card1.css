@@ -44,20 +44,37 @@ header{
     list-style-type:none;
     font-size:15px;
     font-family:poppins;
-    margin: 0 0 0 60px;
+    margin: 0 0 0 40px;
+    font-weight: bold;
+    
 
 }
 .nav a{
     color:white;
     text-decoration:none;
     text-transform:none;
+    position: relative;
+    
 }
-.nav a:hover{
+/* .nav a:hover{
     background-color:#4D5D53;
-}
+} */
+.nav a:after{
+    content:"";
+    position: absolute;
+    background-color: chocolate;
+    height: 3px;
+    width:0;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+    }
+    .nav a:hover:after{
+        width:100%;
+    }
 hr{
 float: right;
-width:41rem;
+width:35rem;
 margin-right:8rem;
 
 }
@@ -176,7 +193,7 @@ span{
   }
   
   #submit{
-    background-color: #1B1B1B;
+    background-color: rgb(238, 158, 9);;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -186,6 +203,9 @@ span{
     font-family: poppins;
     width:100%;
     
+  }
+  #submit:hover{
+    background-color: #4D5D53;
   }
 
 
