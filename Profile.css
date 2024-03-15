@@ -1,0 +1,252 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+  background-color:#1B1B1B;
+    width: 100%;
+    position: relative;
+}
+#logo{
+  position: absolute;
+  top:10px;
+  border-radius:50px;
+  left:50px;
+  bottom: 20px;
+}
+
+.vl {
+    border-left: 2px solid white;
+    height:597px;
+    margin-left:180px;
+    margin-top:0px;
+  }
+  header{
+    position: absolute;
+    display: block;
+    justify-content:space-evenly;
+    top:80px;
+    left:70px;
+    font-size: 15px;
+   
+  }
+  header img{
+    border-radius:50%;
+    margin-left:-10px;
+
+  }
+  figcaption{
+    position: absolute;
+    font-family: poppins;
+    font-size: 12px;
+    color: white;
+    left:-50px;
+  }
+  #fig img{
+    border-radius:50px;
+  }
+  #fig{
+    position: absolute;
+    bottom:85px;
+    left:55px;
+  }
+  .profile{
+    position: absolute;
+    top:80px;
+    left:250px;
+  
+  }
+  .profile img{
+    border-radius:20px;
+  }
+  .profile figcaption{
+   font-family: poppins;
+   font-size:20px; 
+    left:70px;
+  }
+  .profile figcaption a{
+    text-decoration: none;
+    transition: font-size 1s;
+    color:white;
+  }
+  .profile figcaption a:hover{
+     color: #F04A00;
+    font-size: 23px;
+  }
+
+  
+  .nav a{
+    color:white;
+    text-decoration: none;
+    text-decoration: none;
+    text-transform:none;
+    font-family: poppins;
+    position: relative;
+    transition: font-size 1s;
+   
+
+  }
+  .nav a:after{
+    content:"";
+    position: absolute;
+    background-color:rgb(227, 109, 66);
+    height: 3px;
+    width:0;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+    }
+    .nav a:hover:after{
+        width:100%;
+    }
+  .nav a:hover{
+   font-size:20px;
+   color:rgb(227, 109, 66);
+  }
+  .nav li{
+   
+    list-style-type:none;
+    margin:20px 20px 20px -25px;
+    
+  }
+  .nav ul{
+    position: absolute;
+   
+    margin:30px 0 0 0;
+  }
+
+ 
+ #logout{
+    position: absolute;
+    top:550px;
+    left:20px;
+    color:#E3DAC9;
+    font-size: 20px;
+ }
+ span{
+    font-family:poppins;
+    transition: font-size 1s;
+ }
+ span:hover{
+  color:#F04A00;
+  font-size: 20px; ;
+ }
+ /*Profile form*/
+ #h2p{
+    position: absolute;
+    top:0px;
+    left:650px;
+    font-family: poppins;
+    color: #E3DAC9;
+ }
+fieldset{
+    position: absolute;
+    justify-content: space-between;
+    display: flex;
+    width:45%;
+    top:110px;
+    right:20px;
+    padding:30px;
+    
+}
+#fname{
+    width: 100%;
+    padding:3px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: poppins;
+  }
+  #lname{
+    width: 100%;
+    padding:3px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: poppins;
+  }
+  #gender{
+    width: 100%;
+    padding:3px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: poppins;
+  }
+  #country{
+    width: 100%;
+    padding:3px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: poppins;
+  }
+  #phone{
+    width:250px;
+    padding:3px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: poppins;
+  }
+  #city{
+    width: 100%;
+    padding:3px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: poppins;
+  }
+  #email{
+    width:250px;
+    padding:3px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: poppins;
+
+  }
+  #date{
+    width: 100%;
+    padding:4px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: poppins;
+  }
+  label{
+    color:black;
+    font-size: 15px;
+    font-family:poppins;
+    font-weight: 500;
+  }
+ 
+ 
+ fieldset{
+    background-color:white;
+    border: 1px solid #ccc;
+ }
+#upprofile{
+    position: absolute;
+    bottom:10px;
+    left:130px;
+    width: 50%;
+    height:30px;
+    border-radius:5px;
+    cursor: pointer;
+    transition: font-size 1s;
+    font-weight: bold;
+}
+#upprofile:hover{
+    font-size: 20px;
+    background-color: #F04A00;
+    color: white;
+}

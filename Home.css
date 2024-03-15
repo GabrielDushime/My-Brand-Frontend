@@ -57,7 +57,7 @@ header{
     color:white;
     text-decoration:none;
     text-transform:none;
-    transition: font-size 0.3s;
+    transition: font-size 1s;
 }
 .nav a:hover{
     font-size:20px;

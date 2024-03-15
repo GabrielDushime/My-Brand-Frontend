@@ -9,8 +9,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <title>MY Brand Gabriel DUSHIME</title>
-        <link rel="stylesheet" href="./Dashboard.css">
-        <script src="./Dashboard.js"></script>
+        <link rel="stylesheet" href="./Profile.css">
+        <script src="./Profile.js"></script>
         
     </head>
     <body>
@@ -29,7 +29,7 @@
                 <li><a href="Profile.html">Profile</a></li> 
                 <li> <a href="./Users.html"><i class="material-icons" style="font-size:36px"></i>Users</a></li>
                 <li> <a href="./Message.html">Messages</a></li>
-                <li> <a href="./Comment.html">Comments</a></li>
+                <li> <a href="Comment">Comments</a></li>
                 <li> <a href="./BlogDashboard.html">Blogs</a></li>
                 <li> <a href="./Portifoliodashboard.html">Portifolio</a></li>
                 
@@ -43,34 +43,40 @@
     
     <a href="./Home.html"><i class="fa fa-sign-out"  id="logout"><span>Logout</span></i></a>
     <div class="Checker">
-    <div class="blogs-card">
-        <a href="./BlogDashboard.html"><img src="./Images/Blog a.jpg"></a>
-        <p>The Old Blogs</p>
+        <div class="profile">
+        <figure>
+            <img src="/Images/home.jpg" alt="my logo" width="300px" height="400px">
+            <figcaption><a href="">Change Profile</figcaption>
+        </figure>
     </div>
-    <div class="Messages">
-        <a href="./Message.html"><img src="./Images/Message image.jpeg"></a>
-        <p>Messages</p>
-    </div>
-    <div class="Comments">
-        <a href="Comment.html"><img src="./Images/Comment image.jpeg"></a>
-        <p>Comments</p>
-    </div>
-    </div>
-    <div class="Total-reached">
-        <div class="users">
-            <img src="./Images/Total users.jpeg"></a>
-            <p>Total Number of the users</p>
-        </div>
-        <div class="messages">
-            <img src="./Images/Total Messages.jpeg"></a>
-            <p>Total Numbers Of the messages</p>
-        </div>
-        <div class="comments">
-            <img src="./Images/comments.jpeg"></a>
-            <p>Total Number of the comment</p>
-        </div>
-        
-
+    <h2 id="h2p">My Profile</h2>
+    <div class="form">
+        <form>
+            <fieldset>
+             <div class="field1">
+                <label>First Name</label><br>
+                <input type="text" id="fname" name="fname" placeholder="Gabriel"><br>
+                <label>Gender</label><br>
+                <input type="text" id="gender" name="gender" placeholder="Male" ><br>
+                <label>Email</label><br>
+                <input type="email" id="email" name="email" placeholder="dushimegabriel@gmail.com"><br> 
+                <label>Country</label><br>
+                <input type="text" id="country" name="country" placeholder="Rwanda"><br>
+             </div>  
+             <div class="field2">
+                <label for="sname">Second Name</label><br>
+                <input type="text" id="lname" name="lname" placeholder="DUSHIME"><br>
+                <label>Phone Number</label><br>
+                <input type="number" id="phone" name="phone" placeholder="+250783447260/0732022414" ><br>
+                <label>Date Of Birth</label><br>
+                <input type="date" id="date" name="date"><br>
+                <label>City/State</label><br>
+                <input type="text" id="city" name="city" placeholder="Kigali/Rwanda"><br>
+             </div>
+              <button type="button" value="Update Profile" id="upprofile">Update Profile</button>
+            </fieldset>
+           
+        </form>
     </div>
     </body>    
 </html>

@@ -292,12 +292,17 @@ background-color: #fff;
 width:200px;
 border-radius:15px;
 right: 0PX;
-margin-right:230PX;
-margin-top:16PX;
+margin-right:520PX;
+margin-top:0PX;
 height:150px;
-
-
+visibility: hidden;
 }
+
+.open-popup{
+  visibility: visible;
+  /* transform: translate(10%,-50%) sclae(1); */
+  } 
+  
 .popup img{
 height: 30px;
 width:30px;
@@ -327,6 +332,7 @@ background-color: rgb(49, 130, 49);
 border: 0;
 cursor: pointer;
 }
+
 /* .popup{
 width:300px;
 background-color: #fff;

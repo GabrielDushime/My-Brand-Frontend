@@ -39,16 +39,15 @@ function validateForm() {
         return false;
      }
     
-    {
+
         return true;
-        
-        
-     }
-     
-    
+
 }
 /*Pop Up Message*/
-let popup=document.getElementById("popup");
+/* let popup=document.getElementById("popup"); */
+
+let submit=document.getElementById("submit");
+
 function openpopup()
 {
     popup.classList.add("open-popup");
