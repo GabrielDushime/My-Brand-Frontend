@@ -5,7 +5,7 @@
 body{
   position: realtive;
   width: 100%;
-  background-color:#1B1B1B;
+  background-color:#043434;
 
   font-size: 12px;
 }
@@ -49,13 +49,13 @@ header{
 
 }
 .nav a{
-  color:white;
+  color:#04ec64;
   text-decoration:none;
   text-transform:none;
   transition: font-size 1s;
 }
 .nav a:hover{
-  color:#F04A00;
+  color:#00BFFF;
   font-size:20px;
 }
 
@@ -98,11 +98,11 @@ legend{
 }
 legend a{
   transition: font-size 1s;
-  color:rgb(10, 245, 10);
+  color:#00BFFF;
   font-family: poppins;
 }
 legend a:hover{
-  color: #F04A00;
+  color:#04ec64;
   font-size: 20px;
 }
 fieldset {
@@ -158,7 +158,7 @@ label{
   font-family:poppins;
 }
 #SignUp{
-  background-color: #1B1B1B;
+  background-color:#043434;
   color: white;
   padding: 3px 120px;
   border: none;
@@ -170,7 +170,7 @@ label{
   
 }
 #SignUp:hover{
-  background-color:#F04A00;
+  background-color:#00BFFF;
   font-size: 20px;
 }
 
@@ -191,13 +191,13 @@ a{
 
 
 .have-account a{
- color: rgb(10, 244, 10);
+  color:#00BFFF;
  font-family: poppins;
  transition: font-size 1s;
 }
 .have-account a:hover{
   font-size: 20px;
-  color:#F04A00;
+  color:#04ec64;
 }
 /*popup message*/
 .popup{
@@ -209,7 +209,7 @@ a{
   margin-right:230PX;
   margin-top:16PX;
   height:150px;
-  visibility:hidden;
+  visibility:visible;
 
   
 }
@@ -247,11 +247,11 @@ cursor: pointer;
   position: absolute;
   display: flex;
   justify-content: space-around;
-  background-color:black;
+  background-color:#081c2c;
   height:100px;
   bottom:0px;
   width:100%;
-  top:35rem;
+  top:38rem;
   border-radius: 0 0 100px 100px;
 
  
@@ -290,20 +290,20 @@ cursor: pointer;
 .quicklink a{
   text-decoration: none;
   text-transform: none;
-  color:white;
+  color:#00BFFF;
   transition: font-size 1s;
 }
 .quicklink a:hover{
-  color: #F04A00;
+  color:#04ec64;
   font-size: 20px;
 }
 .quicklink h{
-  color:white;
+  color:#00BFFF;
   font-family:poppins;
   font-weight: bold; 
 }
 .contact{
-  color:white;
+  color:#00BFFF;
   margin-top:15px;
   font-family:poppins;
   margin-left:150px;
@@ -312,6 +312,7 @@ cursor: pointer;
 .contact h{
   font-weight: bold;
   margin-left:50px;
+  color:#00BFFF;
 }
 .contact p{
  margin-top:3px;
@@ -322,7 +323,7 @@ cursor: pointer;
 }
 .social h{
   margin-left: 50px;
-  color: white;
+  color:#00BFFF;
   font-family:poppins;
   font-size:12px;
 }
@@ -340,7 +341,7 @@ border-radius:100px;
 margin-left:10px;
 }
 .fa:hover{
-  background-color:#F04A00;
+  background-color:#00BFFF;
 }
 #hr1{
   position: absolute;

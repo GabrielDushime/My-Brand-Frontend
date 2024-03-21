@@ -5,7 +5,7 @@
 body{
   position: realtive;
   width: 100%;
-  background-image: url('./Images/R\ \(2\).jpeg');
+  background-color:#043434;
   font-size: 12px;
 }
 @media screen and (min-width:541px)
@@ -48,13 +48,13 @@ header{
 
 }
 .nav a{
-  color:white;
+  color:#04ec64;
   text-decoration:none;
   text-transform:none;
   transition: font-size 1s;
 }
 .nav a:hover{
- color: #F04A00;
+ color: #00BFFF;
   font-size: 20px;
 }
 hr{
@@ -73,8 +73,8 @@ margin-right:8rem;
   right:30px;
   margin-right:10px;
   border-radius:5px;
-  background-color:white;
-  color: black;
+  background-color:#081c2c;
+  color: #00BFFF;
   width:80px;
   height: 40px;
   margin-top:40px;
@@ -85,8 +85,9 @@ margin-right:8rem;
   transition:font-size 1s;
 } 
 #back:hover{
-  background-color:#F04A00;
+  background-color:#04ec64;
   font-size: 20px;
+  color:#043434;
 }
 h2{
   color: white;
@@ -157,7 +158,7 @@ textarea {
 }
 
 #submit{
-  background-color:#4D5D53;
+  background-color:#043434;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -170,7 +171,7 @@ textarea {
   
 }
 #submit:hover{
-background-color: #F04A00;
+background-color:#04ec64;
 font-size: 20px;
 }
 #email-error{
@@ -190,7 +191,7 @@ font-weight: bold;
   position:absolute;
   display: flex;
   justify-content: space-around;
-  background-color:black;
+  background-color:#081c2c;
   height:100px;
   width:100%;
   bottom:0px;
@@ -202,9 +203,11 @@ font-weight: bold;
 .quicklink{
   margin-top:15px;
   font-size:12px;
+  
 }
 .quicklink h{
   margin-left:80px;
+  color:#00BFFF;
 }
 .quicklink ul{
   position: absolute;
@@ -225,20 +228,20 @@ font-weight: bold;
 .quicklink a{
   text-decoration: none;
   text-transform: none;
-  color:white;
+  color:#00BFFF;
   transition: font-size 1s;
 }
 .quicklink a:hover{
-  color: #F04A00;
+  color:#04ec64;
   font-size: 20px;
 }
 .quicklink h{
-  color:white;
+  color:#00BFFF;
   font-family:poppins;
   font-weight: bold; 
 }
 .contact{
-  color:white;
+  color:#00BFFF;
   margin-top:15px;
   font-family:poppins;
   margin-left:150px;
@@ -247,6 +250,7 @@ font-weight: bold;
 .contact h{
   font-weight: bold;
   margin-left:50px;
+  color:#00BFFF;
 }
 .contact p{
  margin-top:3px;
@@ -257,7 +261,7 @@ font-weight: bold;
 }
 .social h{
   margin-left: 50px;
-  color: white;
+  color:#00BFFF;
   font-family:poppins;
   font-size:12px;
 }
@@ -270,7 +274,7 @@ width:20px;
 text-align: center;
 text-decoration: none;
 background:white;
-color:#4D5D53;
+color:#043434;
 border-radius:100px;
 margin-left:10px;
 }
@@ -295,14 +299,14 @@ right: 0PX;
 margin-right:520PX;
 margin-top:0PX;
 height:150px;
-visibility: hidden;
+visibility:visible;
 }
 
 .open-popup{
   visibility: visible;
   /* transform: translate(10%,-50%) sclae(1); */
   } 
-  
+
 .popup img{
 height: 30px;
 width:30px;

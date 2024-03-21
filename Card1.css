@@ -5,7 +5,7 @@
 body{
     position: realtive;
     width: 100%;
-    background-color:#1B1B1B;
+    background-color:#043434;
     font-size: 12px;
 }
 @media screen and (min-width:541px)
@@ -50,7 +50,7 @@ header{
 
 }
 .nav a{
-    color:white;
+    color:#04ec64;
     text-decoration:none;
     text-transform:none;
     /* position: relative; */
@@ -59,7 +59,7 @@ header{
 }
 .nav a:hover{
     font-size: 20px;
-    color:#F04A00 ;
+    color: #00BFFF;
 }
 /* .nav a:after{
     content:"";
@@ -195,7 +195,7 @@ span{
   }
   
   #submit{
-    background-color:#1B1B1B;
+    background-color:#043434;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -208,7 +208,7 @@ span{
     
   }
   #submit:hover{
-    background-color:#F04A00;
+    background-color: #00BFFF;
     font-size: 20px;
   }
 
@@ -224,7 +224,7 @@ span{
     position: absolute;
     display: flex;
     justify-content: space-around;
-    background-color:black;
+    background-color:#081c2c;
     height:100px;
     width:100%;
     border-radius: 0 0 100px 100px;
@@ -244,6 +244,7 @@ span{
 }
 .quicklink h{
     margin-left:80px;
+    color: #00BFFF;
 }
 .quicklink ul{
     position: absolute;
@@ -264,20 +265,20 @@ span{
 .quicklink a{
     text-decoration: none;
     text-transform: none;
-    color:white;
+    color: #00BFFF;
     transition: font-size 1s;
 }
 .quicklink a:hover{
-    color: #F04A00;
+    color:#04ec64;
     font-size: 20px;
 }
 .quicklink h{
-    color:white;
+    color: #00BFFF;
     font-family:poppins;
     font-weight: bold; 
 }
 .contact{
-    color:white;
+    color: #00BFFF;
     margin-top:15px;
     font-family:poppins;
     margin-left:150px;
@@ -296,7 +297,7 @@ span{
 }
 .social h{
     margin-left: 50px;
-    color: white;
+    color: #00BFFF;
     font-family:poppins;
     font-size:12px;
 }
@@ -315,7 +316,7 @@ span{
  cursor: pointer;
 }
 .fa:hover{
-    background-color:#F04A00;
+    background-color: #00BFFF;
 }
 
 /*Comment section*/

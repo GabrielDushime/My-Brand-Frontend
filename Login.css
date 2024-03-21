@@ -6,7 +6,7 @@ body{
   position: realtive;
   width: 100%;
   height:max-content;
-  background-color:#1B1B1B;
+  background-color:#081c2c;
   font-size: 12px;
 }
 @media screen and (min-width:541px)
@@ -49,14 +49,14 @@ header{
 
 }
 .nav a{
-  color:white;
+  color:#00BFFF;
   text-decoration:none;
   text-transform:none;
   transition: font-size 1s;
 }
 .nav a:hover{
   font-size: 20px;
-  color: #F04A00;
+  color:#04ec64;
 }
 
 #back{
@@ -64,8 +64,8 @@ header{
   right:30px;
   margin-right:10px;
   border-radius:5px;
-  background-color:white;
-  color: black;
+  background-color:#043434;
+  color:white;
   width:80px;
   height: 40px;
   margin-top:40px;
@@ -76,7 +76,7 @@ header{
   transition: font-size 1s;
 } 
 #back:hover{
-  background-color:#F04A00;
+  background-color:#00BFFF;
   font-size: 20px;
 }
 h2{
@@ -134,7 +134,7 @@ label{
   font-family:poppins;
 }
 #logbutton{
-  background-color: #1B1B1B;
+  background-color:#081c2c;
   color: white;
   padding: 6px 130px;
   border: none;
@@ -146,7 +146,7 @@ label{
   
 }
 #logbutton:hover{
-  background-color:#F04A00;
+  background-color:#00BFFF;
   font-size: 20px;
 }
 
@@ -157,10 +157,11 @@ p{
 p a{
   text-decoration: none;
   transition: font-size 1s;
+  color: #04ec64;
  
 }
 p a:hover{
-  color: #F04A00;
+  color:#00BFFF;
   font-size: 20px;
 }
 #p{
@@ -170,7 +171,7 @@ p a:hover{
 #forgot{
   font-family: poppins;
   margin-bottom:25px;
-  color: cornflowerblue;
+  color:#043434;
 }
  a{
   text-decoration:none;
@@ -232,7 +233,7 @@ cursor: pointer;
   position: absolute;
   display: flex;
   justify-content: space-around;
-  background-color:black;
+  background-color:#043434;
   height:100px;
   bottom:-25px;
   width:100%;
@@ -267,7 +268,7 @@ cursor: pointer;
 .quicklink a{
   text-decoration: none;
   text-transform: none;
-  color:white;
+  color:#04ec64;
   transition: font-size 1s;
 }
 .quicklink a:hover{
@@ -275,12 +276,12 @@ cursor: pointer;
   font-size: 20px;
 }
 .quicklink h{
-  color:white;
+  color:#04ec64;
   font-family:poppins;
   font-weight: bold; 
 }
 .contact{
-  color:white;
+  color:#04ec64;
   margin-top:15px;
   font-family:poppins;
   margin-left:150px;
@@ -289,9 +290,11 @@ cursor: pointer;
 .contact h{
   font-weight: bold;
   margin-left:50px;
+   color:#04ec64;;
 }
 .contact p{
  margin-top:3px;
+ color:#04ec64;
 }
 .social{
   margin-top:15px;
@@ -299,7 +302,7 @@ cursor: pointer;
 }
 .social h{
   margin-left: 50px;
-  color: white;
+  color:#04ec64;
   font-family:poppins;
   font-size:12px;
 }
@@ -312,7 +315,7 @@ width:20px;
 text-align: center;
 text-decoration: none;
 background:white;
-color:black;
+color:#081c2c;
 border-radius:100px;
 margin-left:10px;
 }

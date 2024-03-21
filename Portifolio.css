@@ -6,7 +6,7 @@ body{
     position: realtive;
     width: 100%;
     height:max-content;
-    background-color:#1B1B1B;
+    background-color:#081c2c;
     font-size: 12px;
 }
 @media screen and (min-width:541px)
@@ -49,18 +49,18 @@ header{
 
 }
 .nav a{
-    color:white;
+    color:#00BFFF;
     text-decoration:none;
     text-transform:none;
     transition: font-size 1s;
 }
 .nav a:hover{
-    color:#F04A00 ;
+    color:#04ec64;
     font-size: 20px;
 }
 
 h2{
-    color: white;
+    color:#04ec64;
     text-align: center;
     margin-top:20px;
     font-family: poppins;
@@ -98,7 +98,7 @@ p{
     position: absolute;
     display: flex;
     justify-content: space-around;
-    background-color:black;
+    background-color:#043434;
     height:100px;
     bottom:0px;
     width:100%;
@@ -135,20 +135,20 @@ p{
 .quicklink a{
     text-decoration: none;
     text-transform: none;
-    color:white;
+    color:#04ec64;
     transition: font-size 1s;
 }
 .quicklink a:hover{
     font-size: 20px;
-    color: #F04A00;
+    color:#00BFFF;
 }
 .quicklink h{
-    color:white;
+    color:#04ec64;
     font-family:poppins;
     font-weight: bold; 
 }
 .contact{
-    color:white;
+    color:#04ec64;
     margin-top:15px;
     font-family:poppins;
     margin-left:150px;
@@ -160,6 +160,7 @@ p{
 }
 .contact p{
    margin-top:3px;
+   color:#04ec64;
 }
 .social{
     margin-top:15px;
@@ -167,7 +168,7 @@ p{
 }
 .social h{
     margin-left: 50px;
-    color: white;
+    color:#04ec64;
     font-family:poppins;
     font-size:12px;
 }
@@ -185,7 +186,7 @@ p{
  margin-left:10px;
 }
 .fa:hover{
-    background-color:#F04A00;
+    background-color:#00BFFF;
 }
 
 

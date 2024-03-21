@@ -12,7 +12,7 @@ function closeNav()
 
 
 /*Copyright*/
-document.getElementById("current-year").textContent = new Date().getFullYear();
+// document.getElementById("current-year").textContent = new Date().getFullYear();
 
 
 /*Form Validation*/
@@ -37,4 +37,16 @@ function validateForm() {
         return true;
     }
    
+}
+
+document.getElementById("logbutton").addEventListener("click",(e)=>{
+    e.preventDefault();
+    validateForm();
+  document.getElementById("popup").style.visibility="visible"
+}
+)
+
+function closepopup(){
+    document.getElementById("popup").style.visibility="hidden"
+
 }

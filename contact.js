@@ -46,13 +46,18 @@ function validateForm() {
 /*Pop Up Message*/
 /* let popup=document.getElementById("popup"); */
 
-let submit=document.getElementById("submit");
+// let submit=document.getElementById("submit");
 
-function openpopup()
-{
-    popup.classList.add("open-popup");
-}
-function closepopup()
-{
-    popup.classList.remove("open-popup");
-}
+// submit.addEventListener("click",()=>{
+//     document.getElementById("popup").style.display="hidden";
+
+// })
+
+// function openpopup()
+// {
+//     popup.classList.add("open-popup");
+// }
+// function closepopup()
+// {
+//     popup.classList.remove("open-popup");
+// }
