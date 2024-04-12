@@ -47,6 +47,8 @@ document.addEventListener('DOMContentLoaded', function() {
        // Send data to backend
        fetch('https://my-brand-backend-heoy.onrender.com/api/message', {
                method: 'POST',
+               mode: "cors",
+               credentials: "include",
                headers: {
                    'Content-Type': 'application/json',
                },
