@@ -45,22 +45,17 @@
             <a href="./Home.html"><input type="button" value="Back" id="back"></a><br><br>
         </div>
         <div class="form">
-           
-            <form name="contact-form" action="/submit" onsubmit="return validateForm()"  method="post"  >
+            <form id="contact-form">
                 <fieldset>
                     <legend>Leave us your message!</legend>
                     <label for="name">Your full Name:</label>
-                    <span id="username-error" style="color: red; display: none ;font-size:10px">Please Enter Your Full Name!</span>
-                    <input type="text" id="name" name="name" >
+                    <input type="text" id="name" name="username" required><br>
                     <label for="email">Your Email:</label>
-                    <span id="email-error" style="color: red; display: none ;font-size:10px">Email is Required!</span>
-                    <input type="email" id="email" name="email" >
+                    <input type="email" id="email" name="email" required><br>
                     <label for="message"> Your Message:</label>
-                    <span id="message-error" style="color: red; display: none ;font-size:10px">Please Leave Us Your Message!</span>
-                    <textarea id="message" name="message" rows="4" cols="50" placeholder="Type your message...."></textarea>
-                    <input type="button" value="Send Your Message" id="submit">
+                    <textarea id="message" name="message" rows="4" cols="50" placeholder="Type your message...." required></textarea><br>
+                    <button type="submit">Send Your Message</button>
                 </fieldset>
-
             </form>
         </div>
         <!-- <div class="Message-pop"> -->

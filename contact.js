@@ -43,21 +43,39 @@ function validateForm() {
         return true;
 
 }
-/*Pop Up Message*/
-/* let popup=document.getElementById("popup"); */
+// fetching Messages to my baceknd 
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+   event.preventDefault(); // Prevent default form submission behavior
 
-// let submit=document.getElementById("submit");
+   // Get form data
+   const formData = new FormData(this);
 
-// submit.addEventListener("click",()=>{
-//     document.getElementById("popup").style.display="hidden";
+   // Convert formData to JSON object
+   const jsonObject = {};
+   formData.forEach((value, key) => {
+       jsonObject[key] = value;
+   });
 
-// })
-
-// function openpopup()
-// {
-//     popup.classList.add("open-popup");
-// }
-// function closepopup()
-// {
-//     popup.classList.remove("open-popup");
-// }
+   // Send data to backend
+   fetch('https://my-brand-backend-heoy.onrender.com/api/message', {
+       method: 'POST',
+       headers: {
+           'Content-Type': 'application/json',
+       },
+       body: JSON.stringify(jsonObject),
+   })
+   .then(response => {
+       if (!response.ok) {
+           throw new Error('Network response was not ok');
+       }
+       return response.json();
+   })
+   .then(data => {
+       console.log('Message created successfully:', data);
+       // Optionally, you can display a success message to the user
+   })
+   .catch(error => {
+       console.error('Error submitting message:', error);
+       // Optionally, you can display an error message to the user
+   });
+});
