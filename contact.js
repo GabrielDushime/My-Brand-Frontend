@@ -1,72 +1,95 @@
-document.addEventListener('DOMContentLoaded', function() {
-   // Side Navigation
-   function openNav() {
-       document.getElementById("mySidenav").style.width = "118px";
+/*Side Navigation*/
+function openNav()
+{
+    document.getElementById("mySidenav").style.width = "118px";
+}
+
+function closeNav() 
+{
+   document.getElementById("mySidenav").style.width = "0";
+}
+
+
+
+/*Copyright*/
+document.getElementById("current-year").textContent = new Date().getFullYear();
+
+
+/*Form Validation*/
+function validateForm() {
+   var isValid = true;
+
+   // Validate Name
+   var name = document.getElementById("name").value;
+   if (name.trim() === "") {
+       document.getElementById("username-error").style.display = "inline";
+       isValid = false;
+   } else {
+       document.getElementById("username-error").style.display = "none";
    }
 
-   function closeNav() {
-       document.getElementById("mySidenav").style.width = "0";
+   // Validate Email
+   var email = document.getElementById("email").value;
+   if (email.trim() === "") {
+       document.getElementById("email-error").style.display = "inline";
+       isValid = false;
+   } else {
+       document.getElementById("email-error").style.display = "none";
    }
 
-
-   // Form Validation
-   function validateForm() {
-       let name = document.getElementById("name").value;
-       const email = document.getElementById("email").value;
-       let message = document.getElementById("message").value;
-       if (name === "") {
-           document.getElementById("username-error").style.display = "inline";
-           return false;
-       }
-
-       if (email === "" || !email.includes('@')) {
-           document.getElementById("email-error").style.display = "inline";
-           return false;
-       }
-       if (message === "") {
-           document.getElementById("message-error").style.display = "inline";
-           return false;
-       }
-
-       return true;
+   // Validate Message
+   var message = document.getElementById("message").value;
+   if (message.trim() === "") {
+       document.getElementById("message-error").style.display = "inline";
+       isValid = false;
+   } else {
+       document.getElementById("message-error").style.display = "none";
    }
 
-   // Fetching Messages to my backend
-   document.getElementById('contact-form').addEventListener('submit', function(event) {
-       event.preventDefault(); // Prevent default form submission behavior
+   // If form validation is successful, show the popup
+   if (isValid) {
+       document.getElementById("popup").style.display = "block";
+       return false; // Prevent form submission
+   }
 
-       // Get form data
-       const formData = new FormData(this);
+   return isValid;
+}
 
-       // Convert formData to JSON object
-       const jsonObject = {};
-       formData.forEach((value, key) => {
-           jsonObject[key] = value;
-       });
+function closePopup() {
+   document.getElementById("popup").style.display = "none";
+}
 
-       // Send data to backend
-       fetch('https://my-brand-backend-heoy.onrender.com/api/message', {
-               method: 'POST',
-               mode: "cors",
-               credentials: "include",
-               headers: {
-                   'Content-Type': 'application/json',
-               },
-               body: JSON.stringify(jsonObject),
-           })
-           .then(response => {
-               if (!response.ok) {
-                   throw new Error('Network response was not ok');
-               }
-               return response.json();
-           })
-           .then(data => {
-               console.log('Message created successfully:', data);
-               // Optionally, you can display a success message to the user
-           })
-           .catch(error => {
-               console.error('Error submitting message:', error);
-               // Optionally, you can display an error message to the user
-           });
-   });
-});
+
+//Fetching data to my backend
+
+document.getElementById('contactForm').addEventListener('submit', async function(event) {
+  event.preventDefault();
+
+  const formData = new FormData(this);
+  const jsonObject = {};
+  formData.forEach((value, key) => {
+    jsonObject[key] = value;
+  });
+  const jsonData = JSON.stringify(jsonObject);
+
+  try {
+    const response = await fetch('https://my-brand-backend-heoy.onrender.com/api/message', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: jsonData
+    });
+    
+    if (!response.ok) {
+      throw new Error('Failed to send message');
+    }
+
+    alert('Message sent successfully');
+   
+    this.reset();
+  } catch (error) {
+    console.error('Error:', error);
+    alert('Failed to send message');
+  }
+}); 
