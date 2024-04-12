@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
        document.getElementById("mySidenav").style.width = "0";
    }
 
-   // Copyright
-   document.getElementById("current-year").textContent = new Date().getFullYear();
 
    // Form Validation
    function validateForm() {
