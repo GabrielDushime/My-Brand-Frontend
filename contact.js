@@ -11,8 +11,7 @@ function closeNav()
 
 
 
-/*Copyright*/
-document.getElementById("current-year").textContent = new Date().getFullYear();
+
 
 
 /*Form Validation*/
@@ -51,7 +50,6 @@ function validateForm() {
        document.getElementById("popup").style.display = "block";
        return false; // Prevent form submission
    }
-
    return isValid;
 }
 
