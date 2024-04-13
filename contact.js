@@ -1,49 +1,18 @@
 
 // Fetching data to backend
-async function submitForm(event) {
-  event.preventDefault();
 
-  const formData = new FormData(this);
-  const jsonObject = {};
-  formData.forEach((value, key) => {
-    jsonObject[key] = value;
-  });
-  const jsonData = JSON.stringify(jsonObject);
 
-  try {
-    const response = await fetch('https://my-brand-backend-heoy.onrender.com/api/message', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: jsonData
-    });
-    
-    if (!response.ok) {
-      throw new Error('Failed to send message');
-    }
 
-    alert('Message sent successfully');
-   
-    this.reset();
-  } catch (error) {
-    console.error('Error:', error);
-    alert('Failed to send message');
-  }
-}
 
-// Ensure that the code runs after the HTML document has fully loaded
-window.onload = function() {
-  const contactForm = document.getElementById('contact-form');
 
-  if (contactForm) {
-    // If the form element exists, add the event listener
-    contactForm.addEventListener('submit', submitForm);
-  } else {
-    // If the form element doesn't exist, log an error
-    console.error('Contact form not found.');
-  }
-};
+
+
+
+
+
+
+
+
 
 
 
