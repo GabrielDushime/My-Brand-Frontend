@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>MY Brand Gabriel DUSHIME</title>
+        <link rel="stylesheet" href="/User-Dashboard/Pages/Css Pages/contact.css">
+        <script src="/User-Dashboard/Pages/Js Pages/contact.js"></script>
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    </head>
+    <body>
+        <header>
+            <figure class="logo">
+                <img src="/User-Dashboard/Images/New logo.jpg" alt="My Logo" height="35" width="25">
+            </figure>
+            <div class="nav">
+                <ul >
+                    <li><a href="./Home.html">Home</a></li>
+                    <li><a href="./About.html">About Me</a></li>
+                    <li><a href="./Contact.html">Contact Me</a></li>
+                    <li><a href="./Skills.html">Skills</a></li>
+                    <li><a href="./Blogs.html">Blogs</a></li>
+                    <li><a href="./Portofolio.html">Portofolio</a></li> 
+                </ul>
+            </div> 
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="./Home.html">Home</a></li>
+                <a href="./About.html">About Me</a>
+                <a href="./Contact.html">Contact Me</a>
+                <a href="./Skills.html">Skills</a>
+                <a href="./Blogs.html">Blogs</a>
+                <a href="./Portofolio.html">Portofolio</a>
+                <a href="./Login.html">Login</a>
+
+            </div>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+        </header>
+   
+        <div class="back-button">
+            <a href="./Home.html"><input type="button" value="Back" id="back"></a><br><br>
+        </div>
+        <div class="form">
+            <form id="contact-form">
+                <fieldset>
+                    <legend>Leave us your message!</legend>
+                    <label for="name">Your full Name:</label>
+                    <input type="text" id="name" name="username" required><br>
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="message"> Your Message:</label>
+                    <textarea id="message" name="message" rows="4" cols="50" placeholder="Type your message...." required></textarea><br>
+                    <button type="submit">Send Your Message</button>
+                </fieldset>
+            </form>
+        </div>
+        <!-- <div class="Message-pop"> -->
+            <div class="popup">
+                <img src="/User-Dashboard/Images/check.png">
+                <h2 id="ht">Thank you</h2>
+                <p>Your Message sent Successfully!</p>
+                <button type="ok" onclick="closepopup()">Ok</button>
+            </div>
+        <!-- </div> -->
+      
+        <footer>
+          <div class="footer">
+             <div class="quicklink">
+                <h><u>Quick Links</u></h>
+                <ul>
+                    <li id="1"><a href="./Home.html" >Home</a></li>   
+                    <li id="2"><a href="./About.html" >About Me</a></li>  
+                    <li id="3"><a href="./Contact.html" >Contact Me</a></li>
+                    <li id="4"><a href="./Portofolio.html" >Portofolio</a></li>    
+                </ul>
+              </div>
+                <div class="contact">
+                    <h><u>Contacts</u></h>
+                    <p >Tel:+250783447260</p>
+                    <p >E-mail:dushimegabriel@gmail.com</p>
+                </div>
+                <div class="copyright">
+
+                </div>
+                <div class="social">
+                    <h><u>Reach Out To Me</u></h><br>
+                    <a href="https://app.slack.com/client/TRLV27SKH/CRK3S017S"  class="fa fa-slack"id="slack" ></a>
+                    <a href="https://www.linkedin.com/in/gabriel-dushime-b0589325a/" class="fa fa-linkedin"id="linkidin"></a>
+                    <a href="https://github.com/GabrielDushime" class="fa fa-github" id="Github" ></a>
+                    <a href="https://www.facebook.com/profile.php?id=61556627968779"  class="fa fa-facebook" id="facebook"></a>
+                    <a href="https://www.instagram.com/gabriel.dushime/" class="fa fa-instagram" id="Instagram" ></a>
+                    <a href="https://twitter.com/RealGabzzzz7"  class="fa fa-twitter" id="Twitter"></a>
+                </div>
+              
+            
+            </div>
+        </footer>
+    </body>    
+</html>
