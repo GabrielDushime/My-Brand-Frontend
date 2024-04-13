@@ -1,6 +1,44 @@
 
 // Fetching data to backend
+const sendMessage = async() => {    
+  let sender = document.getElementById('name').value; 
+  let email = document.getElementById('email').value; 
+  let text = document.getElementById('message').value;
+  let sent=document.getElementById('sent') 
+  
+   
+  const formData = {
+      name: sender,
+      email: email,
+      text: text,
+      
+  };
 
+  try {
+       sent.style.display='block'
+       sent.innerText='sending message'
+      await fetch('https://my-brand-backend-heoy.onrender.com/api/message', {
+          method: "POST",
+          body: JSON.stringify(formData),
+          headers: {
+              "Content-Type": "application/json"
+          }
+      })
+      .then(response => response.json())
+      .then(async( result ) => {
+          sent.innerText=await result.message;
+          
+      })
+      .catch(error => {
+          console.log(error);
+      });
+      
+      setTimeout(()=>{sent.style.display='none'},4000)
+  
+    } catch (error) {
+      alert("Error:", error); 
+  }
+};
 
 
 
