@@ -106,6 +106,32 @@ function validateForm() {
   return isValid;
 }
 
-function closePopup() {
-  document.getElementById("popup").style.display = "none";
+// Function to show success popup
+function showSuccessPopup() {
+  const popup = document.getElementById('popup');
+  popup.innerHTML = `
+      <img src="/User-Dashboard/Images/check.png">
+      <h2 id="ht">Thank you</h2>
+      <p>Your Message sent Successfully!</p>
+      <button type="button" onclick="closePopup()">Ok</button>
+  `;
+  popup.style.display = "block";
 }
+
+// Function to show error popup
+function showErrorPopup() {
+  const popup = document.getElementById('popup');
+  popup.innerHTML = `
+      <img src="/User-Dashboard/Images/error.png">
+      <h2 id="ht">Error</h2>
+      <p>Failed to send message. Please try again later.</p>
+      <button type="button" onclick="closePopup()">Ok</button>
+  `;
+  popup.style.display = "block";
+}
+
+// Function to close popup
+function closePopup() {
+  document.getElementById('popup').style.display = "none";
+}
+
