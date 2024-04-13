@@ -4,7 +4,7 @@ const sendMessage = async() => {
   let sender = document.getElementById('name').value; 
   let email = document.getElementById('email').value; 
   let text = document.getElementById('message').value;
-  let sent=document.getElementById('sent') 
+  
   
    
   const formData = {
@@ -33,10 +33,15 @@ const sendMessage = async() => {
           console.log(error);
       });
       
+    alert('Message sent successfully');
+   
+    this.reset();
+      
       setTimeout(()=>{sent.style.display='none'},4000)
   
     } catch (error) {
       alert("Error:", error); 
+      alert('Failed to send message');
   }
 };
 
