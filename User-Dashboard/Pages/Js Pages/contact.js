@@ -1,49 +1,41 @@
-
-// Fetching data to backend
-const sendMessage = async() => {    
-  let sender = document.getElementById('name').value; 
-  let email = document.getElementById('email').value; 
-  let text = document.getElementById('message').value;
-  
-  
-   
-  const formData = {
-      name: sender,
-      email: email,
-      text: text,
-      
-  };
-
+// Function to send form data to backend
+async function sendFormData(data) {
   try {
-       sent.style.display='block'
-       sent.innerText='sending message'
-      await fetch('https://my-brand-backend-heoy.onrender.com/api/message', {
-          method: "POST",
-          body: JSON.stringify(formData),
+      const response = await fetch('https://my-brand-backend-heoy.onrender.com/api/message', {
+          method: 'POST',
           headers: {
-              "Content-Type": "application/json"
-          }
-      })
-      .then(response => response.json())
-      .then(async( result ) => {
-          sent.innerText=await result.message;
-          
-      })
-      .catch(error => {
-          console.log(error);
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
       });
-      
-    alert('Message sent successfully');
-   
-    this.reset();
-      
-      setTimeout(()=>{sent.style.display='none'},4000)
-  
-    } catch (error) {
-      alert("Error:", error); 
-      alert('Failed to send message');
+      const responseData = await response.json();
+      if (response.ok) {
+          // If successful response from backend
+          console.log('Message sent successfully:', responseData);
+          showSuccessPopup(); // Show success popup
+      } else {
+          // If backend returns an error
+          console.error('Error sending message:', responseData.message);
+          showErrorPopup(); // Show error popup
+      }
+  } catch (error) {
+      // If there's a network error
+      console.error('Network error:', error);
+      showErrorPopup(); // Show error popup
   }
-};
+}
+
+// Function to handle form submission
+function handleSubmit(event) {
+  event.preventDefault(); // Prevent default form submission
+  const form = document.getElementById('contact-form');
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
+  sendFormData(data); // Send form data to backend
+}
+
+// Add form submit event listener
+document.getElementById('contact-form').addEventListener('submit', handleSubmit);
 
 
 
