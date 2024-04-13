@@ -1,41 +1,48 @@
-// Function to send form data to backend
-async function sendFormData(data) {
-  try {
-      const response = await fetch('https://my-brand-backend-heoy.onrender.com/api/message', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(data)
-      });
-      const responseData = await response.json();
-      if (response.ok) {
-          // If successful response from backend
-          console.log('Message sent successfully:', responseData);
-          showSuccessPopup(); // Show success popup
-      } else {
-          // If backend returns an error
-          console.error('Error sending message:', responseData.message);
+document.addEventListener('DOMContentLoaded', function() {
+  // Function to send form data to backend
+  async function sendFormData(data) {
+      try {
+          const response = await fetch('https://my-brand-backend-heoy.onrender.com/api/message', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(data)
+          });
+          const responseData = await response.json();
+          if (response.ok) {
+              // If successful response from backend
+              console.log('Message sent successfully:', responseData);
+              showSuccessPopup(); // Show success popup
+          } else {
+              // If backend returns an error
+              console.error('Error sending message:', responseData.message);
+              showErrorPopup(); // Show error popup
+          }
+      } catch (error) {
+          // If there's a network error
+          console.error('Network error:', error);
           showErrorPopup(); // Show error popup
       }
-  } catch (error) {
-      // If there's a network error
-      console.error('Network error:', error);
-      showErrorPopup(); // Show error popup
   }
-}
 
-// Function to handle form submission
-function handleSubmit(event) {
-  event.preventDefault(); // Prevent default form submission
-  const form = document.getElementById('contact-form');
-  const formData = new FormData(form);
-  const data = Object.fromEntries(formData.entries());
-  sendFormData(data); // Send form data to backend
-}
+  // Function to handle form submission
+  function handleSubmit(event) {
+      event.preventDefault(); // Prevent default form submission
+      const form = document.getElementById('contact-form');
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      sendFormData(data); // Send form data to backend
+  }
 
-// Add form submit event listener
-document.getElementById('contact-form').addEventListener('submit', handleSubmit);
+  // Add form submit event listener
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+      contactForm.addEventListener('submit', handleSubmit);
+  } else {
+      console.error('Contact form not found');
+  }
+});
 
 
 
