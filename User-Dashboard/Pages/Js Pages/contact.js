@@ -1,61 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-  // Function to send form data to backend
-  async function sendFormData(data) {
-      try {
-          const response = await fetch('https://my-brand-backend-heoy.onrender.com/api/message', {
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/json'
-              },
-              body: JSON.stringify(data)
-          });
-          const responseData = await response.json();
-          if (response.ok) {
-              // If successful response from backend
-              console.log('Message sent successfully:', responseData);
-              showSuccessPopup(); // Show success popup
-          } else {
-              // If backend returns an error
-              console.error('Error sending message:', responseData.message);
-              showErrorPopup(); // Show error popup
-          }
-      } catch (error) {
-          // If there's a network error
-          console.error('Network error:', error);
-          showErrorPopup(); // Show error popup
-      }
-  }
-
-  // Function to handle form submission
-  function handleSubmit(event) {
-      event.preventDefault(); // Prevent default form submission
-      const form = document.getElementById('contact-form');
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData.entries());
-      sendFormData(data); // Send form data to backend
-  }
-
-  // Add form submit event listener
-  const contactForm = document.getElementById('contact-form');
-  if (contactForm) {
-      contactForm.addEventListener('submit', handleSubmit);
-  } else {
-      console.error('Contact form not found');
-  }
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // Side Navigation
@@ -134,4 +76,36 @@ function showErrorPopup() {
 function closePopup() {
   document.getElementById('popup').style.display = "none";
 }
+
+
+
+
+document.getElementById('contact-form').addEventListener('submit', async (event) => {
+  event.preventDefault();
+ 
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData.entries());
+ 
+  try {
+     const response = await fetch('https://my-brand-backend-heoy.onrender.com/messages', {
+       method: 'POST',
+       headers: {
+         'Content-Type': 'application/json',
+       },
+       body: JSON.stringify(data),
+     });
+ 
+     if (!response.ok) {
+       throw new Error('Network response was not ok');
+     }
+ 
+     const result = await response.json();
+     console.log(result);
+     // Show a success message or redirect the user
+  } catch (error) {
+     console.error('There was a problem with your fetch operation:', error);
+     // Show an error message
+  }
+ });
+ 
 
