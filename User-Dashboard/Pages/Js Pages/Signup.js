@@ -35,7 +35,7 @@ function validateForm() {
     if (password === "") {
         document.getElementById("password-error").style.display = "inline";
         return false;
-    } else if (!/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/.test(password)) {
+    } else if (!/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}/.test(password)) {
         // Check if password meets the pattern requirements
         document.getElementById("password-error").textContent = "Password must contain at least one number, one uppercase letter, one lowercase letter, and be at least 8 characters long.";
         document.getElementById("password-error").style.display = "inline";
