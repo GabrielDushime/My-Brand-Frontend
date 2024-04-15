@@ -37,11 +37,11 @@ function validateForm() {
         document.getElementById("cpassword-error").style.display = "inline";
         return false;
     }
-    if (cpassword !== password) {
+  /*   if (cpassword !== password) {
         document.getElementById("matchpasscode-error").style.display = "inline";
         return false;
     }
-
+ */
     return true;
 }
 
