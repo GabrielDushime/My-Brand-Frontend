@@ -77,35 +77,3 @@ function closePopup() {
   document.getElementById('popup').style.display = "none";
 }
 
-
-
-
-document.getElementById('contact-form').addEventListener('submit', async (event) => {
-  event.preventDefault();
- 
-  const formData = new FormData(event.target);
-  const data = Object.fromEntries(formData.entries());
- 
-  try {
-     const response = await fetch('https://my-brand-backend-heoy.onrender.com/messages', {
-       method: 'POST',
-       headers: {
-         'Content-Type': 'application/json',
-       },
-       body: JSON.stringify(data),
-     });
- 
-     if (!response.ok) {
-       throw new Error('Network response was not ok');
-     }
- 
-     const result = await response.json();
-     console.log(result);
-     // Show a success message or redirect the user
-  } catch (error) {
-     console.error('There was a problem with your fetch operation:', error);
-     // Show an error message
-  }
- });
- 
-
