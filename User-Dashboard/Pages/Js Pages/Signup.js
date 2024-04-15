@@ -1,5 +1,3 @@
-
-
 function openNav() {
     document.getElementById("mySidenav").style.width = "118px";
 }
@@ -35,34 +33,28 @@ function validateForm() {
         document.getElementById("cpassword-error").style.display = "inline";
         return false;
     }
-  /*   if (cpassword !== password) {
-        document.getElementById("matchpasscode-error").style.display = "inline";
-        return false;
-    }
- */
-   // If all validations pass, submit the form data to the backend
-   const formData = new FormData(document.forms["contact-form"]);
-   fetch('https://my-brand-backend-heoy.onrender.com/api/user/signup', {
-       method: 'POST',
-       body: formData
-   })
-   .then(response => {
-       if (response.ok) {
-           // Handle success, maybe show a success message
-           showSuccessPopup();
-       } else {
-           // Handle errors, maybe show an error message
-           showErrorPopup();
-       }
-   })
-   .catch(error => {
-       console.error('Error:', error);
-       // Handle errors, maybe show an error message
-       showErrorPopup();
-   });
 
-   // Prevent default form submission
-   return false;
+    // If all validations pass, submit the form data to the backend
+    const formData = new FormData(document.forms["contact-form"]);
+    fetch('https://my-brand-backend-heoy.onrender.com/api/user/signup', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            // Handle success, maybe show a success message
+            showSuccessPopup();
+        } else {
+            // Handle errors, maybe show an error message
+            showErrorPopup();
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        // Handle errors, maybe show an error message
+        showErrorPopup();
+    });
+
+    // Prevent default form submission
+    return false;
 }
-
-
