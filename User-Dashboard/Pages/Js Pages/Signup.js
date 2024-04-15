@@ -38,7 +38,8 @@ function validateForm() {
     const formData = new FormData(document.forms["contact-form"]);
     fetch('https://my-brand-backend-heoy.onrender.com/api/user/signup', {
         method: 'POST',
-        body: formData
+        body: formData,
+        mode: 'no-cors' // Set mode to 'no-cors' to fetch with CORS disabled
     })
     .then(response => {
         if (response.ok) {
