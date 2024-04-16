@@ -104,8 +104,11 @@
             function submitForm() {
                 
                 alert('Thank you! Your message has been sent successfully.');
+             
+                document.getElementById('contact-form').reset();
+              
                 
-                return true;
+                return false;
             }
         </script>
         
