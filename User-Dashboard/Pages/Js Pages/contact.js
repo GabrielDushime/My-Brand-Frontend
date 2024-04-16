@@ -1,4 +1,11 @@
+function submitForm() {
+  
+  alert('Thank you for contacting us!');
+  
+  document.getElementById('contact-form').reset();
 
+  return false;
+}
 
 // Side Navigation
 function openNav() {

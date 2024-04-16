@@ -101,37 +101,7 @@
             
             </div>
         </footer>
-        <script>
-            function submitForm(event) {
-                event.preventDefault(); // Prevent the default form submission behavior
         
-                // Submit the form using Fetch API
-                fetch(event.target.action, {
-                    method: event.target.method,
-                    body: new FormData(event.target)
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Failed to submit message. Please try again later.');
-                    }
-                    // Show the popup message upon successful submission
-                    document.querySelector('.popup').style.display = 'block';
-                    // Reset the form after a brief delay
-                    setTimeout(() => {
-                        document.getElementById('contact-form').reset();
-                        closePopup();
-                    }, 2000); // Adjust the delay time as needed
-                })
-                .catch(error => {
-                    console.error('Error:', error.message);
-                    alert('Failed to submit message. Please try again later.'); // Notify the user about the error
-                });
-            }
-        
-            function closePopup() {
-                document.querySelector('.popup').style.display = 'none';
-            }
-        </script>
-        
+           
     </body>    
 </html>
