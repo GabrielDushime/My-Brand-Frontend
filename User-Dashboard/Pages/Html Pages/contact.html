@@ -49,6 +49,7 @@
 
 
 
+
                 <fieldset>
                     <legend>Leave us your message!</legend>
                     <label for="username">Your full Name:</label>
@@ -104,39 +105,43 @@
             </div>
         </footer>
         <script>
-         document.getElementById('contact-form').addEventListener('submit', async function(event) {
+         document.addEventListener('DOMContentLoaded', function() {
+ const form = document.getElementById('contact-form');
+ const popup = document.querySelector('.popup');
+
+ form.addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent default form submission
 
-    const form = event.target;
+    // Serialize form data
     const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
 
-    try {
-        const response = await fetch(form.action, {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-            },
-            body: formData
-        });
+    // Send form data to backend
+    fetch('https://my-brand-backend-heoy.onrender.com/api/message', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+    .then(response => {
+      if (response.ok) {
+        // Display popup on success
+        popup.style.display = 'block';
+      } else {
+        // Handle error
+        console.error('Error submitting form:', response.statusText);
+      }
+    })
+    .catch(error => {
+      console.error('Error submitting form:', error);
+    });
+ });
 
-        if (response.ok) {
-            // Show popup on successful submission
-            document.querySelector('.popup').style.display = 'block';
-            form.reset(); // Reset the form
-
-            // Close popup and reset form on "Ok" button click
-            document.querySelector('.popup button').addEventListener('click', function() {
-                document.querySelector('.popup').style.display = 'none';
-            });
-        } else {
-            // Handle error response
-            console.error('Failed to submit form:', response.statusText);
-            alert('Failed to submit form. Please try again later.');
-        }
-    } catch (error) {
-        console.error('Error submitting form:', error);
-        alert('Error submitting form. Please try again later.');
-    }
+ // Function to close the popup
+ function closepopup() {
+    popup.style.display = 'none';
+ }
 });
 
         </script>
