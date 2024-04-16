@@ -101,30 +101,15 @@
             </div>
         </footer>
         <script>
-          function submitForm(event) {
-        event.preventDefault(); 
-    
-        fetch(event.target.action, {
-            method: event.target.method,
-            body: new FormData(event.target)
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Failed to submit message. Please try again later.');
-            }
-            
-            document.querySelector('.popup').style.display = 'block';
-           
-            setTimeout(() => {
-                document.getElementById('contact-form').reset();
-                document.querySelector('.popup').style.display = 'none';
-            }, 2000); 
-        })
-        .catch(error => {
-            console.error('Error:', error.message);
-            alert('Failed to submit message. Please try again later.'); 
-        });
+          function submitForm() {
+       
+        alert('Thank you for contacting us!');
+       
+        document.getElementById('contact-form').reset();
+     
+        return false;
     }
+    
         </script>
         
     </body>    
