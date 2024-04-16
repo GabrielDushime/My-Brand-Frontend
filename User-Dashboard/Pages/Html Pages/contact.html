@@ -101,35 +101,30 @@
             </div>
         </footer>
         <script>
-            function submitForm(event) {
-    event.preventDefault(); // Prevent the default form submission behavior
-
-    // Submit the form using Fetch API or XMLHttpRequest
-    fetch(event.target.action, {
-        method: event.target.method,
-        body: new FormData(event.target)
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        // Show the popup message upon successful submission
-        document.querySelector('.popup').style.display = 'block';
-        // Reset the form after a brief delay (to allow the user to see the message)
-        setTimeout(() => {
-            event.target.reset();
-        }, 2000); // Adjust the delay time as needed
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        // Handle errors if needed
-    });
-}
-
-function closepopup() {
-    // Hide the popup message
-    document.querySelector('.popup').style.display = 'none';
-}
+          function submitForm(event) {
+        event.preventDefault(); 
+    
+        fetch(event.target.action, {
+            method: event.target.method,
+            body: new FormData(event.target)
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to submit message. Please try again later.');
+            }
+            
+            document.querySelector('.popup').style.display = 'block';
+           
+            setTimeout(() => {
+                document.getElementById('contact-form').reset();
+                document.querySelector('.popup').style.display = 'none';
+            }, 2000); 
+        })
+        .catch(error => {
+            console.error('Error:', error.message);
+            alert('Failed to submit message. Please try again later.'); 
+        });
+    }
         </script>
         
     </body>    
