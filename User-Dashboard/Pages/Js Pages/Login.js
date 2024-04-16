@@ -23,7 +23,7 @@ document.forms['login-form'].addEventListener('submit', async (event) => {
         if (result.isAdmin) {
             window.location.href = 'http://127.0.0.1:5502/Admin-Dashboard/Other-Pages/Dashboard.html';
         } else {
-            window.location.href = 'http://127.0.0.1:5502/User-Dashboard/Pages/Html%20Pages/userdashboard.html';
+            window.location.href = 'https://my-brand-gabriel-frontend.netlify.app/user-dashboard/pages/html%20pages/userdashboard';
         }
     } else {
         // Handle authentication failure
