@@ -45,7 +45,9 @@
             <a href="/Home.html"><input type="button" value="Back" id="back"></a><br><br>
         </div>
         <div class="form">
-            <form id="contact-form" action="https://my-brand-backend-heoy.onrender.com/api/message" method="post" onsubmit="submitForm(event)">
+            <form id="contact-form" action="https://my-brand-backend-heoy.onrender.com/api/message" method="post">
+
+
                 <fieldset>
                     <legend>Leave us your message!</legend>
                     <label for="name">Your full Name:</label>
@@ -57,14 +59,13 @@
                     <button type="submit">Send Your Message</button>
                 </fieldset>
             </form>
-            
         </div>
         <!-- <div class="Message-pop"> -->
             <div class="popup">
                 <img src="/User-Dashboard/Images/check.png">
                 <h2 id="ht">Thank you</h2>
                 <p>Your Message sent Successfully!</p>
-                <button type="button" onclick="closepopup()">Ok</button>
+                <button type="ok" onclick="closepopup()">Ok</button>
             </div>
         <!-- </div> -->
       
@@ -101,15 +102,35 @@
             </div>
         </footer>
         <script>
-          function submitForm() {
-       
-        alert('Thank you for contacting us!');
-       
-        document.getElementById('contact-form').reset();
-     
-        return false;
-    }
-    
+            function submitForm(event) {
+                event.preventDefault(); // Prevent the default form submission behavior
+        
+                // Submit the form using Fetch API
+                fetch(event.target.action, {
+                    method: event.target.method,
+                    body: new FormData(event.target)
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to submit message. Please try again later.');
+                    }
+                    // Show the popup message upon successful submission
+                    document.querySelector('.popup').style.display = 'block';
+                    // Reset the form after a brief delay
+                    setTimeout(() => {
+                        document.getElementById('contact-form').reset();
+                        closePopup();
+                    }, 2000); // Adjust the delay time as needed
+                })
+                .catch(error => {
+                    console.error('Error:', error.message);
+                    alert('Failed to submit message. Please try again later.'); // Notify the user about the error
+                });
+            }
+        
+            function closePopup() {
+                document.querySelector('.popup').style.display = 'none';
+            }
         </script>
         
     </body>    
