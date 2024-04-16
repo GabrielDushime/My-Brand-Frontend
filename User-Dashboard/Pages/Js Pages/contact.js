@@ -39,26 +39,4 @@ function validateForm() {
   } else {
     document.getElementById("message-error").style.display = "none";
   }
-
-  // If form validation is successful, show the popup
-  if (isValid) {
-    document.getElementById("popup").style.display = "block";
-    return false; // Prevent form submission
-  }
-  return isValid;
-}
-
-// Function to show success popup
-function submitForm() {
- 
-  document.querySelector('.popup').style.display = 'block';
- 
-  return false;
-}
-
-function closepopup() {
-
-  document.querySelector('.popup').style.display = 'none';
- 
-  document.getElementById('contact-form').reset();
 }
