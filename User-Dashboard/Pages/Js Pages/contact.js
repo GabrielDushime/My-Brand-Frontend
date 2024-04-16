@@ -49,31 +49,16 @@ function validateForm() {
 }
 
 // Function to show success popup
-function showSuccessPopup() {
-  const popup = document.getElementById('popup');
-  popup.innerHTML = `
-      <img src="/User-Dashboard/Images/check.png">
-      <h2 id="ht">Thank you</h2>
-      <p>Your Message sent Successfully!</p>
-      <button type="button" onclick="closePopup()">Ok</button>
-  `;
-  popup.style.display = "block";
+function submitForm() {
+ 
+  document.querySelector('.popup').style.display = 'block';
+ 
+  return false;
 }
 
-// Function to show error popup
-function showErrorPopup() {
-  const popup = document.getElementById('popup');
-  popup.innerHTML = `
-      <img src="/User-Dashboard/Images/error.png">
-      <h2 id="ht">Error</h2>
-      <p>Failed to send message. Please try again later.</p>
-      <button type="button" onclick="closePopup()">Ok</button>
-  `;
-  popup.style.display = "block";
-}
+function closepopup() {
 
-// Function to close popup
-function closePopup() {
-  document.getElementById('popup').style.display = "none";
+  document.querySelector('.popup').style.display = 'none';
+ 
+  document.getElementById('contact-form').reset();
 }
-
