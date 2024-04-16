@@ -48,9 +48,10 @@
             <form id="contact-form" action="https://my-brand-backend-heoy.onrender.com/api/message" method="post">
 
 
+
                 <fieldset>
                     <legend>Leave us your message!</legend>
-                    <label for="name">Your full Name:</label>
+                    <label for="username">Your full Name:</label>
                     <input type="text" id="name" name="username" required><br>
                     <label for="email">Your Email:</label>
                     <input type="email" id="email" name="email" required><br>
@@ -102,15 +103,41 @@
             </div>
         </footer>
         <script>
-            function submitForm() {
-                
-                alert('Thank you for contacting Us!');
-          
-                document.getElementById('contact-form').reset();
-               
-                
-                return false;
-            }
+         document.getElementById('contact-form').addEventListener('submit', async function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const form = event.target;
+    const formData = new FormData(form);
+
+    try {
+        const response = await fetch(form.action, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+            },
+            body: formData
+        });
+
+        if (response.ok) {
+            // Show popup on successful submission
+            document.querySelector('.popup').style.display = 'block';
+            form.reset(); // Reset the form
+
+            // Close popup and reset form on "Ok" button click
+            document.querySelector('.popup button').addEventListener('click', function() {
+                document.querySelector('.popup').style.display = 'none';
+            });
+        } else {
+            // Handle error response
+            console.error('Failed to submit form:', response.statusText);
+            alert('Failed to submit form. Please try again later.');
+        }
+    } catch (error) {
+        console.error('Error submitting form:', error);
+        alert('Error submitting form. Please try again later.');
+    }
+});
+
         </script>
            
     </body>    
