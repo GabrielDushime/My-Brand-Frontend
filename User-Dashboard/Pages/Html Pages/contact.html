@@ -45,8 +45,7 @@
             <a href="/Home.html"><input type="button" value="Back" id="back"></a><br><br>
         </div>
         <div class="form">
-            <form id="contact-form" action="https://my-brand-backend-heoy.onrender.com/messages" method="post">
-
+            <form id="contact-form" action="https://my-brand-backend-heoy.onrender.com/api/message" method="post" onsubmit="return submitForm()">
                 <fieldset>
                     <legend>Leave us your message!</legend>
                     <label for="name">Your full Name:</label>
@@ -58,6 +57,7 @@
                     <button type="submit">Send Your Message</button>
                 </fieldset>
             </form>
+            
         </div>
         <!-- <div class="Message-pop"> -->
             <div class="popup">
@@ -100,5 +100,14 @@
             
             </div>
         </footer>
+        <script>
+            function submitForm() {
+                
+                alert('Thank you! Your message has been sent successfully.');
+                
+                return true;
+            }
+        </script>
+        
     </body>    
 </html>
