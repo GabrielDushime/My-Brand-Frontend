@@ -1,13 +1,43 @@
-function submitForm() {
-  
-  alert('Thank you for contacting us!');
-  
-  document.getElementById('contact-form').reset();
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contact-form');
+  const popup = document.getElementById('popup');
+  const closePopupBtn = document.getElementById('close-popup');
 
-  return false;
-}
+  form.addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      const formData = new FormData(form); 
 
-// Side Navigation
+      
+      const formDataObj = {};
+      formData.forEach((value, key) => {
+          formDataObj[key] = value;
+      });
+
+     
+      fetch(form.action, {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formDataObj),
+      })
+      .then(response => {
+          if (response.ok) {
+              form.reset();
+              popup.classList.add('active');
+          } else {
+              throw new Error('Network response was not ok');
+          }
+      })
+      .catch(error => console.error('Error:', error));
+  });
+
+  closePopupBtn.addEventListener('click', function() {
+      popup.classList.remove('active'); 
+  });
+});
+
+
 function openNav() {
   document.getElementById("mySidenav").style.width = "118px";
 }

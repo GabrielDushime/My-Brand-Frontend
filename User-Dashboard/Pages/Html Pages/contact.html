@@ -47,9 +47,6 @@
         <div class="form">
             <form id="contact-form" action="https://my-brand-backend-heoy.onrender.com/api/message" method="post">
 
-
-
-
                 <fieldset>
                     <legend>Leave us your message!</legend>
                     <label for="username">Your full Name:</label>
@@ -58,17 +55,18 @@
                     <input type="email" id="email" name="email" required><br>
                     <label for="message"> Your Message:</label>
                     <textarea id="message" name="message" rows="4" cols="50" placeholder="Type your message...." required></textarea><br>
-                    <button type="submit">Send Your Message</button>
+                    <button type="submit" id="submit-btn">Send Your Message</button>
+                </fieldset>
 
                 </fieldset>
             </form>
         </div>
         <!-- <div class="Message-pop"> -->
-            <div class="popup">
+            <div class="popup" id="popup">
                 <img src="/User-Dashboard/Images/check.png">
                 <h2 id="ht">Thank you</h2>
                 <p>Your Message sent Successfully!</p>
-                <button type="ok" onclick="closepopup()">Ok</button>
+                <button id="close-popup">Ok</button>
             </div>
         <!-- </div> -->
       
@@ -104,47 +102,7 @@
             
             </div>
         </footer>
-        <script>
-         document.addEventListener('DOMContentLoaded', function() {
- const form = document.getElementById('contact-form');
- const popup = document.querySelector('.popup');
-
- form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission
-
-    // Serialize form data
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
-
-    // Send form data to backend
-    fetch('https://my-brand-backend-heoy.onrender.com/api/message', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    })
-    .then(response => {
-      if (response.ok) {
-        // Display popup on success
-        popup.style.display = 'block';
-      } else {
-        // Handle error
-        console.error('Error submitting form:', response.statusText);
-      }
-    })
-    .catch(error => {
-      console.error('Error submitting form:', error);
-    });
- });
-
- // Function to close the popup
- function closepopup() {
-    popup.style.display = 'none';
- }
-});
-
-        </script>
+      
            
     </body>    
 </html>

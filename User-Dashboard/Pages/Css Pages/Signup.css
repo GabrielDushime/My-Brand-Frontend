@@ -157,7 +157,7 @@ fieldset {
 label{
   font-family:poppins;
 }
-#SignUp{
+#submit-btn{
   background-color:#043434;
   color: white;
   padding: 3px 120px;
@@ -169,7 +169,7 @@ label{
   transition: font-size 1s;
   
 }
-#SignUp:hover{
+#submit-btn:hover{
   background-color:#00BFFF;
   font-size: 20px;
 }
@@ -200,48 +200,67 @@ a{
   color:#04ec64;
 }
 /*popup message*/
-.popup{
-  position: absolute;
-  background-color: #fff;
-  width:200px;
-  border-radius:15px;
-  right: 0PX;
-  margin-right:230PX;
-  margin-top:16PX;
-  height:150px;
-  visibility:visible;
+
+#ht {
+  color: #111;
+  margin-bottom: 60px;
+  padding-top: 20px;
+}
+
+.popup {
+  position: fixed;
+  top: 50%; 
+  left: 49%; 
+  transform: translate(-50%, -50%) scale(0);
+  background-color: #ffff;
+  width: 180px;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  visibility: hidden;
+  transition: transform 0.3s ease-in-out, visibility 0.3s;
+  z-index: 9999;
+}
+
+
+.popup img {
+  height: 30px;
+  width: 30px;
+  display: block;
+  margin: 0 auto;
+  margin-top:-10px;
+}
+
+.popup h2 {
+  margin-top:-10px;
+  text-align: center;
+  font-size: 18px;
 
   
 }
-.popup img{
-  height: 30px;
-  width:30px;
-  align-items: center;
-  justify-content: center;
-  padding-left:85px;
-  margin-top:5px;
-}
-.popup h2{
-  margin-top:0px;
+
+.popup p {
+  margin-top:-60px;
   text-align: center;
-  margin-left:10px;
+  font-size: 13px;
+  font-family:poppins;
+  
 }
-.popup p{
-  margin-top:15px;
-  text-align: center;
-  font-size:13px;
-}
+
 .popup button{
-  width:90%;
+  width:100%;
 border-radius:5px;
-margin-top:25px;
-margin-left:10px;
+margin-top:10px;
 font-size:15px;
 font-weight: 600;
 color: #fff;
-background-color: rgb(49, 130, 49);
+background-color:rgb(49, 130, 49); 
 border: 0;
 cursor: pointer;
+}
+.popup.active {
+  transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
 }
 .footer{
   position: absolute;

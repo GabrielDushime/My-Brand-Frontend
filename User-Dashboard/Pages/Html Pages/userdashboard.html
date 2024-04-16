@@ -5,8 +5,9 @@
      <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>MY Brand Gabriel DUSHIME</title>
-        <link rel="stylesheet" href="/User-Dashboard/Pages/Css Pages/Login.css">
+        <title>MY Brand's Gabriel DUSHIME</title>
+        <link rel="stylesheet" href="/User-Dashboard/Pages/Css Pages/userdashboard.css">
+        <script src="/User-Dashboard/Pages/Js Pages/Home.js"></script>
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     </head>
@@ -18,60 +19,55 @@
             <div class="nav">
                 <ul >
                     <li><a href="/Home.html">Home</a></li>
-                    <li><a href="./About.html">About Me</a></li>
-                    <li><a href="./Contact.html">Contact Me</a></li>
-                    <li><a href="./Skills.html">Skills</a></li>
+                    <li><a href="/User-Dashboard/Pages/Html Pages/About.html">About Me</a></li>
+                    <li><a href="/User-Dashboard/Pages/Html Pages/contact.html">Contact Me</a></li>
+                    <li><a href="/User-Dashboard/Pages/Html Pages/Skills.html">Skills</a></li>
                     <li><a href="/User-Dashboard/Blogs/Blogs Html/Blogs.html">Blogs</a></li>
                     <li><a href="./Portofolio.html">Portofolio</a></li> 
                 </ul>
-            </div> 
-            <div id="mySidenav" class="sidenav">
+            </div>
+            <a href="/Home.html" id="log">Logout</a>
+                <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="/Home.html">Home</a></li>
-                <a href="./About.html">About Me</a>
-                <a href="./Contact.html">Contact Me</a>
-                <a href="./Skills.html">Skills</a>
+            <div class="sidenav">
+                <a href="./Home.html">Home</a></li>
+                <a href="/User-Dashboard/Pages/Html Pages/About.html">About Me</a>
+                <a href="/User-Dashboard/Pages/Html Pages/contact.html">Contact Me</a>
+                <a href="/User-Dashboard/Pages/Html Pages/Skills.html">Skills</a>
                 <a href="/User-Dashboard/Blogs/Blogs Html/Blogs.html">Blogs</a>
-                <a href="./Portofolio.html">Portofolio</a>
-                <a href="./Login.html">Login</a>
+                <a href="./User-Dashboard/Pages/Html Pages/Portofolio.html">Portofolio</a>
+                <a href="/User-Dashboard/Pages/Html Pages/Login.html">Login</a>
 
             </div>
             <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
         </header>
-      
-        <div class="back-button">
-            <a href="/Home.html"><input type="button" value="Back" id="back"></a><br><br>
+        
+        <div class="container">
+            <div class="photo">
+                <figure>
+                    <img src="/User-Dashboard/Images/home.jpg" alt="Home photo" height="150" width="125">
+                </figure>
+            </div>
+            <div class="content">
+                <p>
+                    My name is Gabriel DUSHIME a software developer known for My expertise in designing and implementing software solutions. With a passion for coding and problem-solving,
+                    I excel in creating efficient and user-friendly applications. My proficiency spans across various programming languages and technologies, allowing Me to tackle diverse projects with ease.
+                </p>
+                <p>
+                    My commitment to staying updated with the latest advancements in the software development field enables Me to deliver cutting-edge solutions that meet the evolving needs of clients and users. My attention to detail, analytical mindset, and strong communication skills makes Me an invaluable asset to any development team.
+                </p>
+            </div>
         </div>
       
-       <div class="form">
-        <form name="login-form" id="login-form" onsubmit="return validateForm()" method="post">
-            <fieldset>
-                <legend>Welcome Back...!</legend>
-                <label for="email">Email:</label>
-                <span id="email-error" style="color: red; display: none ;font-size:10px">Please Enter Your Email!</span>
-                <input type="email" id="email" name="email"> <!-- Add name attribute -->
-                <label for="password">Password:</label>
-                <span id="password-error" style="color: red; display: none ;font-size:10px">Please fill your passcode!</span>
-                <input type="password" id="password" name="password"> <!-- Add name attribute -->
-                <input type="checkbox" checked="checked">
-                <p id="p"> Remember Me!</p><br>
-                <input type="submit" value="Login" id="logbutton">
-                <p>Don’t have an account?<a href="/User-Dashboard/Pages/Html Pages/Signup.html" id="signup">Signup</a></p>
-                <a href="#" id="forgot">Forgot Password?</a>
-            </fieldset>
-            </form>
-       </div>
-      
- 
         <footer>
           <div class="footer">
              <div class="quicklink">
                 <h><u>Quick Links</u></h>
                 <ul>
-                    <li id="1"><a href="./Home.html" >Home</a></li>   
-                    <li id="2"><a href="./About.html" >About Me</a></li>  
-                    <li id="3"><a href="./Contact.html" >Contact Me</a></li>
+                    <li id="1"><a href="/Home.html" >Home</a></li>   
+                    <li id="2"><a href="/User-Dashboard/Pages/Html Pages/About.html" >About Me</a></li>  
+                    <li id="3"><a href="/User-Dashboard/Pages/Html Pages/contact.html" >Contact Me</a></li>
                     <li id="4"><a href="./Portofolio.html" >Portofolio</a></li>    
                 </ul>
               </div>
@@ -95,6 +91,5 @@
             
             </div>
         </footer>
-        <script src="/User-Dashboard/Pages/Js Pages/Login.js"></script>
     </body>    
 </html>

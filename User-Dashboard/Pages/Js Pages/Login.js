@@ -1,3 +1,42 @@
+async function loginUser(email, password) {
+    try {
+        const response = await fetch('https://my-brand-backend-heoy.onrender.com/api/user/signin', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password }),
+        });
+        return response.json();
+    } catch (error) {
+        console.error('Error logging in:', error);
+    }
+}
+
+document.forms['login-form'].addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const result = await loginUser(email, password);
+    if (result && result.token) {
+        // Authentication successful, redirect based on isAdmin flag
+        if (result.isAdmin) {
+            window.location.href = 'http://127.0.0.1:5502/Admin-Dashboard/Other-Pages/Dashboard.html';
+        } else {
+            window.location.href = 'http://127.0.0.1:5502/User-Dashboard/Pages/Html%20Pages/userdashboard.html';
+        }
+    } else {
+        // Handle authentication failure
+        console.error('Authentication failed:', result.message);
+        // You can display an error message to the user here
+    }
+});
+
+
+
+
+
+
 /*Side Navigation*/
 function openNav()
 {
@@ -8,11 +47,6 @@ function closeNav()
 {
    document.getElementById("mySidenav").style.width = "0";
 }
-
-
-
-/*Copyright*/
-// document.getElementById("current-year").textContent = new Date().getFullYear();
 
 
 /*Form Validation*/
@@ -39,14 +73,3 @@ function validateForm() {
    
 }
 
-document.getElementById("logbutton").addEventListener("click",(e)=>{
-    e.preventDefault();
-    validateForm();
-  document.getElementById("popup").style.visibility="visible"
-}
-)
-
-function closepopup(){
-    document.getElementById("popup").style.visibility="hidden"
-
-}

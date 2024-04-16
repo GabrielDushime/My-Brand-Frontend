@@ -12,7 +12,17 @@ body{
 Background-image{
     position: fixed;
 }
-
+#log{
+    font-family: poppins;
+    font-size:20px;
+    color:#04ec64;
+    margin-right:-190px;
+    margin-top:22px;
+    text-decoration: none;
+}
+#log a{
+    text-decoration: none;
+}
 @media screen and (min-width:541px)
 {
     .sidenav{ display:none;}
