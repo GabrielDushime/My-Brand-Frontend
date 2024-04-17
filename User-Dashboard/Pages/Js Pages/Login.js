@@ -33,7 +33,7 @@ async function loginUser() {
     }
 
     try {
-        const response = await fetch('https://my-brand-backend-heoy.onrender.com/userSignin', {
+        const response = await fetch('https://my-brand-backend-heoy.onrender.com/api/user/signin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
