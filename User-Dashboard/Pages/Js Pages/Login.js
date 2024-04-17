@@ -10,6 +10,7 @@ async function loginUser(email, password) {
         return response.json();
     } catch (error) {
         console.error('Error logging in:', error);
+        return { error: 'Network error' };
     }
 }
 
@@ -20,18 +21,21 @@ document.forms['login-form'].addEventListener('submit', async (event) => {
     const result = await loginUser(email, password);
     if (result && result.token) {
        
-        if (result.isAdmin) {
-            window.location.href = 'https://my-brand-gabriel-frontend.netlify.app/admin-dashboard/other-pages/dashboard';
+        if (window.location.href == 'https://my-brand-gabriel-frontend.netlify.app/admin-dashboard/other-pages/dashboard') {
+            location.reload();
         } else {
-            window.location.href = 'https://my-brand-gabriel-frontend.netlify.app/user-dashboard/pages/html%20pages/userdashboard';
+            
+            if (result.isAdmin) {
+                window.location.assign('https://my-brand-gabriel-frontend.netlify.app/admin-dashboard/other-pages/dashboard');
+            } else {
+                window.location.assign('https://my-brand-gabriel-frontend.netlify.app/user-dashboard/pages/html%20pages/userdashboard');
+            }
         }
     } else {
-       
-        console.error('Authentication failed:', result.message);
-      
+        console.error('Authentication failed:', result.error || 'Unknown error');
+        
     }
 });
-
 
 
 
