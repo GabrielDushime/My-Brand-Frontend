@@ -21,7 +21,7 @@ document.forms['login-form'].addEventListener('submit', async (event) => {
     if (result && result.token) {
        
         if (result.isAdmin) {
-            window.location.href = 'https://my-brand-gabriel-frontend.netlify.app/Admin-Dashboard/Other-Pages/Dashboard';
+            window.location.href = 'https://my-brand-gabriel-frontend.netlify.app/admin-dashboard/other-pages/dashboard';
         } else {
             window.location.href = 'https://my-brand-gabriel-frontend.netlify.app/user-dashboard/pages/html%20pages/userdashboard';
         }
