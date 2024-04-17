@@ -19,17 +19,16 @@ document.forms['login-form'].addEventListener('submit', async (event) => {
     const password = document.getElementById('password').value;
     const result = await loginUser(email, password);
     if (result && result.token) {
-        // Authentication successful, redirect based on isAdmin flag
+       
         if (result.isAdmin) {
             window.location.href = 'https://my-brand-gabriel-frontend.netlify.app/Admin-Dashboard/Other-Pages/Dashboard';
-            
         } else {
             window.location.href = 'https://my-brand-gabriel-frontend.netlify.app/user-dashboard/pages/html%20pages/userdashboard';
         }
     } else {
-        // Handle authentication failure
+       
         console.error('Authentication failed:', result.message);
-        // You can display an error message to the user here
+      
     }
 });
 
