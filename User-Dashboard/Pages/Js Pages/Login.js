@@ -21,7 +21,8 @@ document.forms['login-form'].addEventListener('submit', async (event) => {
     if (result && result.token) {
         // Authentication successful, redirect based on isAdmin flag
         if (result.isAdmin) {
-            window.location.href = 'http://127.0.0.1:5502/Admin-Dashboard/Other-Pages/Dashboard.html';
+            window.location.href = 'https://my-brand-gabriel-frontend.netlify.app/Admin-Dashboard/Other-Pages/Dashboard';
+            
         } else {
             window.location.href = 'https://my-brand-gabriel-frontend.netlify.app/user-dashboard/pages/html%20pages/userdashboard';
         }
