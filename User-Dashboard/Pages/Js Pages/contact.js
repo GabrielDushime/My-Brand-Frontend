@@ -7,13 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
       event.preventDefault(); 
       const formData = new FormData(form); 
 
-      
       const formDataObj = {};
       formData.forEach((value, key) => {
           formDataObj[key] = value;
       });
 
-     
       fetch(form.action, {
           method: 'POST',
           headers: {
@@ -25,18 +23,21 @@ document.addEventListener('DOMContentLoaded', function() {
           if (response.ok) {
               form.reset();
               popup.classList.add('active');
+              // Assuming the server responds with the new message data
+              return response.json();
           } else {
               throw new Error('Network response was not ok');
           }
       })
+     
       .catch(error => console.error('Error:', error));
   });
 
   closePopupBtn.addEventListener('click', function() {
       popup.classList.remove('active'); 
   });
-});
 
+});
 
 function openNav() {
   document.getElementById("mySidenav").style.width = "118px";

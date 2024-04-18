@@ -1,120 +1,180 @@
 *{
-    padding: 0px;
-    margin: 0px;
+    margin:0px;
+    padding:0px;
 }
 body{
-    position: realtive;
+  background-color:#043434;
     width: 100%;
-    background-color:#1B1B1B;
-    font-size: 12px;
-}
-@media screen and (min-width:541px)
-{
-    .sidenav{ display:none;}
-    span{display: none;}
-}
-header{
     position: relative;
-    display:flex;
-    justify-content: space-around;
 }
-.logo img{
-    position:absolute;
-    height:50px;
-    width:50px;
-    border-radius:50px;
-    left:0px;
-    margin-left:50px;
-    margin-top:10px;
+#logo{
+  position: absolute;
+  top:10px;
+  border-radius:50px;
+  left:50px;
+  bottom: 20px;
 }
-.nav{
-    
-    display:block; 
-    margin:30px;
 
-}
-.nav ul{
-    position: absolute;
-    display:flex;
-    justify-content: space-around;
-    right:8rem;
- 
-}
-.nav li{
-    list-style-type:none;
-    font-size:15px;
-    font-family:poppins;
-    margin: 0 0 0 30px;
-
-}
-.nav a{
-    color:white;
-    text-decoration:none;
-    text-transform:none;
-    transition: font-size 1s;
-}
-.nav a:hover{
-    color: #F04A00;
-    font-size:20px;
-}
-hr{
-float: right;
-width:32rem;
-margin-right:8rem;
-}
-.read-more{
-    display: flex;
-    justify-content:space-between;
-    margin-left: 50px;
-    margin-top: 50px;
-    margin-right:50px;
-    
-}
-.p{
+.vl {
+    border-left: 2px solid white;
+    height:597px;
+    margin-left:180px;
+    margin-top:0px;
+  }
+  header{
     position: absolute;
     display: block;
-    margin-left:450px;
-    margin-right:50px;
-    font-family: poppins;
-    color: white;
-}
+    justify-content:space-evenly;
+    top:80px;
+    left:70px;
+    font-size: 15px;
+   
+  }
+  header img{
+    border-radius:50%;
+    margin-left:-10px;
 
-/*Table of the users*/
+  }
+  figcaption{
+    position: absolute;
+    font-family: poppins;
+    font-size: 12px;
+    color: white;
+    left:-50px;
+  }
+  #fig img{
+    border-radius:50px;
+  }
+  #fig{
+    position: absolute;
+    bottom:80px;
+    left:60px;
+  }
 
-#head{
-    color:#F04A00;
-    font-weight: bold;
+  
+  .nav a{
+    color:white;
+    text-decoration: none;
+    text-decoration: none;
+    text-transform:none;
     font-family: poppins;
-    font-size:25px;
-    margin-left: 50px;
-    margin-top: 50px;
-}
+    position: relative;
+    transition: font-size 1s;
+   
 
-table{
-    border: 1px solid;
-    color: white;
-    border-collapse: collapse;
-    margin:30px 0 50px 50px;
+  }
+  .nav a:after{
+    content:"";
+    position: absolute;
+    background-color:rgb(227, 109, 66);
+    height: 3px;
+    width:0;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+    }
+    .nav a:hover:after{
+        width:100%;
+    }
+  .nav a:hover{
+   font-size:20px;
+   color:rgb(227, 109, 66);
+  }
+  .nav li{
+   
+    list-style-type:none;
+    margin:20px 20px 20px -25px;
+    
+  }
+  .nav ul{
+    position: absolute;
+   
+    margin:30px 0 0 0;
+  }
+    
+   .message-container {
+    position: absolute;
+    display:flex;
+    align-items: center;
+    top:10px;
+    left:200px;
+    
 }
-th{
-    border: 1px solid;
-    color: white;
-    border-collapse: collapse;
-    height:30px;
+.message-container img{
+   border-radius: 50px;
+   height:60px;
+   width:60px;
+   font-size:13px;
+}
+.user-info{
     font-family: poppins;
-    font-weight: bold;
+  font-size:12px;
+    color:white;
 }
-td{
-    border: 1px solid;
-    color: white;
-    border-collapse: collapse;
-    height:25px;
-    font-size:13px;
+.message-content{
     font-family: poppins;
+    font-size:12px;
+    color:#04ec64;
 }
-button{
-    border: 0;
+.message-details {
+    flex: 1;
+    padding-left: 20px;
+   
+}
+.message-actions {
+    display:flex;
+    left: 0px;
+
+}
+.message-actions a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #00BFFF;
+    font-family: poppins;
+    font-size:12px;
+}
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left:0px;
+    top: 0;
     width: 100%;
-    height:100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+.popup-content {
+    background-color:#043434;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
     cursor: pointer;
+}
+.users-info{
+  font-family: poppins;
+  font-size:15px;
+  color:white;
+}
+.messages-content{
+    font-family: poppins;
+    font-size:12px;
+    color:#04ec64;
+}
+h2{
+    color: #00BFFF;
+    font-family: poppins;
 }

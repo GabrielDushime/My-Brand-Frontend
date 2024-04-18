@@ -29,7 +29,7 @@ async function loginUser() {
     const password = document.getElementById("password").value;
 
     if (!validateForm()) {
-        return; // Form validation failed
+        return; 
     }
 
     try {
@@ -48,11 +48,11 @@ async function loginUser() {
         const data = await response.json();
         const { token, user } = data;
 
-        // Save the token and user information in local storage or cookies for later use
+       
         localStorage.setItem('token', token);
         localStorage.setItem('user', JSON.stringify(user));
 
-        // Redirect based on user role
+       
         if (user.role === 'admin') {
             window.location.href = 'https://my-brand-gabriel-frontend.netlify.app/admin-dashboard/other-pages/dashboard';
         } else {
@@ -64,8 +64,8 @@ async function loginUser() {
     }
 }
 
-// Attach the loginUser function to the form's submit event
+
 document.getElementById('login-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault(); 
     loginUser();
 });
