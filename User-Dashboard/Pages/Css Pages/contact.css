@@ -150,7 +150,7 @@ textarea {
   height: 100px;
 }
 
-#submit{
+#submit-btn{
   background-color:#043434;
   color: white;
   padding: 10px 20px;
@@ -163,7 +163,7 @@ textarea {
   transition: font-size 1s;
   
 }
-#submit:hover{
+#submit-btn:hover{
 background-color:#04ec64;
 font-size: 20px;
 }
