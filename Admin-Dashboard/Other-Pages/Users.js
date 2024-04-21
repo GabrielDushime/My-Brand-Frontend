@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
    function viewUser(id) {
         var user = document.getElementById("user" + id);
         var firstName = user.querySelector(".user-info p:nth-child(3)").innerText;
@@ -117,3 +118,4 @@
         var userContainer = document.querySelector(".user-container");
         userContainer.appendChild(newUser);
     }
+});

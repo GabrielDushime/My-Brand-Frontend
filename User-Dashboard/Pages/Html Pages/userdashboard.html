@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>MY Brand's Gabriel DUSHIME</title>
         <link rel="stylesheet" href="/User-Dashboard/Pages/Css Pages/userdashboard.css">
-        <script src="/User-Dashboard/Pages/Js Pages/Home.js"></script>
+        <script src="/User-Dashboard/Pages/Js Pages/userdashboard.js"></script>
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     </head>
@@ -18,25 +18,25 @@
             </figure>
             <div class="nav">
                 <ul >
-                    <li><a href="/Home.html">Home</a></li>
+                    <li><a href="./Home.html">Home</a></li>
                     <li><a href="/User-Dashboard/Pages/Html Pages/About.html">About Me</a></li>
                     <li><a href="/User-Dashboard/Pages/Html Pages/contact.html">Contact Me</a></li>
                     <li><a href="/User-Dashboard/Pages/Html Pages/Skills.html">Skills</a></li>
                     <li><a href="/User-Dashboard/Blogs/Blogs Html/Blogs.html">Blogs</a></li>
-                    <li><a href="./Portofolio.html">Portofolio</a></li> 
+                    <li><a href="/User-Dashboard/Pages/Html Pages/Portofolio.html">Portofolio</a></li> 
                 </ul>
             </div>
-            <a href="/Home.html" id="log">Logout</a>
-                <div id="mySidenav" class="sidenav">
+            <a href="/Home.html" class="login"><button type="button">Logout</button></a> 
+            
+            <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="sidenav">
-                <a href="./Home.html">Home</a></li>
+                <a href="/Home.html">Home</a></li>
                 <a href="/User-Dashboard/Pages/Html Pages/About.html">About Me</a>
                 <a href="/User-Dashboard/Pages/Html Pages/contact.html">Contact Me</a>
                 <a href="/User-Dashboard/Pages/Html Pages/Skills.html">Skills</a>
                 <a href="/User-Dashboard/Blogs/Blogs Html/Blogs.html">Blogs</a>
-                <a href="./User-Dashboard/Pages/Html Pages/Portofolio.html">Portofolio</a>
-                <a href="/User-Dashboard/Pages/Html Pages/Login.html">Login</a>
+                <a href="/User-Dashboard/Pages/Html Pages/Portofolio.html">Portofolio</a>
+                <a href="/Home.html">Logout</a>
 
             </div>
             <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
@@ -46,7 +46,10 @@
         <div class="container">
             <div class="photo">
                 <figure>
-                    <img src="/User-Dashboard/Images/home.jpg" alt="Home photo" height="150" width="125">
+                    <img src="/User-Dashboard/Images/home.jpg" alt="Home photo" height="150" width="125" id="img1">
+                </figure>
+                <figure>
+                    <img src="/User-Dashboard/Images/home2.jpeg" alt="Home photo" height="150" width="125" id="img2">
                 </figure>
             </div>
             <div class="content">
@@ -65,11 +68,10 @@
              <div class="quicklink">
                 <h><u>Quick Links</u></h>
                 <ul>
-                      
-                    <li id="1"><a href="/Home.html" >Home</a></li>   
+                    <li id="1"><a href="./Home.html" >Home</a></li>   
                     <li id="2"><a href="/User-Dashboard/Pages/Html Pages/About.html" >About Me</a></li>  
                     <li id="3"><a href="/User-Dashboard/Pages/Html Pages/contact.html" >Contact Me</a></li>
-                    <li id="4"><a href="./Portofolio.html" >Portofolio</a></li>    
+                    <li id="4"><a href="/User-Dashboard/Pages/Html Pages/Portofolio.html" >Portofolio</a></li>    
                 </ul>
               </div>
                 <div class="contact">
