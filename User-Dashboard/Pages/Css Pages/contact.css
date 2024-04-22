@@ -310,12 +310,6 @@ margin-right:200px;
 /*Pop up Message*/
 
 
-#ht {
-  color: #111;
-  margin-bottom: 60px;
-  padding-top: 20px;
-}
-
 .popup {
   position: fixed;
   top: 50%; 
@@ -445,8 +439,9 @@ cursor: pointer;
   }
   
   footer{
-      height: 120%;
-      
+      height: 100%;
+      margin-top:530px;
+     
   }
   .footer {
       display: flex;

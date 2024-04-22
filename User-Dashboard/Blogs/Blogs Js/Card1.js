@@ -1,66 +1,80 @@
-/*Side Navigation*/
-function openNav()
-{
-    document.getElementById("mySidenav").style.width = "118px";
-}
-
-function closeNav() 
-{
-   document.getElementById("mySidenav").style.width = "0";
-}
-
-/*Copyright*/
-document.getElementById("current-year").textContent = new Date().getFullYear();
-
-
-/*Comment section*/
-document.addEventListener("DOMContentLoaded", function() {
-    const commentForm = document.getElementById("commentForm");
-    const commentText = document.getElementById("commentText");
-    const commentsList = document.getElementById("comments");
-
-    let commentsArray = [];
-
-    // Function to render comments
-    function renderComments() {
-        commentsList.innerHTML = "";
-        commentsArray.forEach((comment, index) => {
-            const li = document.createElement("li");
-            li.classList.add("comment");
-            li.innerHTML = `
-                <div>${comment.text}</div>
-                <button class="edit-btn" onclick="editComment(${index})">Edit</button>
-                <button class="delete-btn" onclick="deleteComment(${index})">Delete</button>
-            `;
-            commentsList.appendChild(li);
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contact-form');
+    const popup = document.getElementById('popup');
+    const closePopupBtn = document.getElementById('close-popup');
+  
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        const formData = new FormData(form); 
+  
+        const formDataObj = {};
+        formData.forEach((value, key) => {
+            formDataObj[key] = value;
         });
-    }
-
-    // Function to add comment
-    commentForm.addEventListener("submit", function(event) {
-        event.preventDefault();
-        const commentTextValue = commentText.value.trim();
-        if (commentTextValue !== "") {
-            commentsArray.push({ text: commentTextValue });
-            commentText.value = "";
-            renderComments();
-        }
+  
+        fetch(form.action, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formDataObj),
+        })
+        .then(response => {
+            if (response.ok) {
+                form.reset();
+                popup.classList.add('active');
+                // Assuming the server responds with the new message data
+                return response.json();
+            } else {
+                throw new Error('Network response was not ok');
+            }
+        })
+       
+        .catch(error => console.error('Error:', error));
     });
-
-    // Function to edit comment
-    window.editComment = function(index) {
-        const newText = prompt("Edit your comment:", commentsArray[index].text);
-        if (newText !== null) {
-            commentsArray[index].text = newText;
-            renderComments();
-        }
-    };
-
-    // Function to delete comment
-    window.deleteComment = function(index) {
-        if (confirm("Are you sure you want to delete this comment?")) {
-            commentsArray.splice(index, 1);
-            renderComments();
-        }
-    };
-});
+  
+    closePopupBtn.addEventListener('click', function() {
+        popup.classList.remove('active'); 
+    });
+  
+  });
+  
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "118px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  
+  // Form Validation
+  function validateForm() {
+    var isValid = true;
+  
+    // Validate Name
+    var name = document.getElementById("name").value;
+    if (name.trim() === "") {
+      document.getElementById("username-error").style.display = "inline";
+      isValid = false;
+    } else {
+      document.getElementById("username-error").style.display = "none";
+    }
+  
+    // Validate Email
+    var email = document.getElementById("email").value;
+    if (email.trim() === "") {
+      document.getElementById("email-error").style.display = "inline";
+      isValid = false;
+    } else {
+      document.getElementById("email-error").style.display = "none";
+    }
+  
+    // Validate Message
+    var message = document.getElementById("message").value;
+    if (message.trim() === "") {
+      document.getElementById("message-error").style.display = "inline";
+      isValid = false;
+    } else {
+      document.getElementById("message-error").style.display = "none";
+    }
+  }
