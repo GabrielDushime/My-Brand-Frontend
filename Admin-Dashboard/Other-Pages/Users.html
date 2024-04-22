@@ -30,40 +30,35 @@
             </ul>
         </div>
     </header>
-       <h2 class="h2">My Brand Users</h2>
-   
-    
-
-    <div class="user-container">
-        <div class="user" id="user1">
+    <div class="container">
+        <h1>User Management</h1>
+      
+        <div class="user">
             <div class="user-info">
-                <p><img src="/User-Dashboard/Images/home.jpg" alt="Profile Photo"></p>
-                <p>1.</p>
-                <p>John</p>
-                <p>Doe</p>
-                <p>john.doe@example.com</p>
-                <p>User</p>
+                <img src="/User-Dashboard/Images/home.jpg" alt="User Photo">
+                <div class="details">
+                    <p><span class="user-id">1</span></p>
+                    <p> <span class="first-name">John</span></p>
+                    <p> <span class="last-name">Doe</span></p>
+                    <p> <span class="email">johndoe@example.com</span></p>
+                    <p> <span class="status">User</span></p>
+                </div>
             </div>
-            <div class="user-actions">
-                <button onclick="viewUser(1)" id="view">View</button>
-                <button onclick="updateUser(1)" id="update">Update</button>
-                <button onclick="deleteUser(1)" id="delete">Delete</button>
+            <div class="actions">
+                <button class="view-btn">View</button>
+                <button class="update-btn">Update</button>
+                <button class="delete-btn">Delete</button>
             </div>
         </div>
-       
- 
-</div>
-
-    <!-- View User Popup -->
-    <div id="viewPopup" class="popup">
-        <span class="close" onclick="closePopup('viewPopup')">&times;</span>
-        <div id="viewContent"></div>
     </div>
-
-    <!-- Update User Popup -->
-    <div id="updatePopup" class="popup">
-        <span class="close" onclick="closePopup('updatePopup')">&times;</span>
-        <div id="updateContent"></div>
+    <div class="overlay" style="display: none; ">
+        <div class="popup">
+            <span class="close">&times;</span>
+            <h2 class="popup-title">User Information</h2>
+            <div class="popup-content">
+               
+            </div>
+        </div>
     </div>
     
     </body>

@@ -70,7 +70,6 @@ document.addEventListener('DOMContentLoaded', function() {
         userActions += "</div>";
 
         newUser.innerHTML = userInfo + userActions;
-
         // Append the new user to the container
         var userContainer = document.querySelector(".user-container");
         console.log("User container:", userContainer);

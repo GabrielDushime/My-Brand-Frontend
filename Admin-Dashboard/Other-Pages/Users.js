@@ -1,121 +1,150 @@
-document.addEventListener('DOMContentLoaded', function() {
-   function viewUser(id) {
-        var user = document.getElementById("user" + id);
-        var firstName = user.querySelector(".user-info p:nth-child(3)").innerText;
-        var lastName = user.querySelector(".user-info p:nth-child(4)").innerText;
-        var email = user.querySelector(".user-info p:nth-child(5)").innerText;
+document.addEventListener('DOMContentLoaded', function () {
+    const viewButtons = document.querySelectorAll('.view-btn');
+    const updateButtons = document.querySelectorAll('.update-btn');
+    const deleteButtons = document.querySelectorAll('.delete-btn');
+    const overlay = document.querySelector('.overlay');
+    const popup = document.querySelector('.popup');
+    const popupContent = document.querySelector('.popup-content');
 
-        var popup = document.getElementById("viewPopup");
-        var popupContent = "<span class='close' onclick='closePopup(\"viewPopup\")'>&times;</span>";
-        popupContent += "<h2>User Information</h2>";
-        popupContent += "<p>First Name: " + firstName + "</p>";
-        popupContent += "<p>Last Name: " + lastName + "</p>";
-        popupContent += "<p>Email: " + email + "</p>";
-        popup.innerHTML = popupContent;
-        popup.style.display = "block";
-    }
-
-    function updateUser(id) {
-        var user = document.getElementById("user" + id);
-        var firstName = user.querySelector(".user-info p:nth-child(3)").innerText;
-        var lastName = user.querySelector(".user-info p:nth-child(4)").innerText;
-        var email = user.querySelector(".user-info p:nth-child(5)").innerText;
-
-        var popup = document.getElementById("updatePopup");
-        var popupContent = "<span class='close' onclick='closePopup(\"updatePopup\")'>&times;</span>";
-        popupContent += "<h2>Update User</h2>";
-        popupContent += "<form>";
-        popupContent += "<label for='fname'>First Name:</label><br>";
-        popupContent += "<input type='text' id='fname' name='fname' value='" + firstName + "'><br>";
-        popupContent += "<label for='lname'>Last Name:</label><br>";
-        popupContent += "<input type='text' id='lname' name='lname' value='" + lastName + "'><br>";
-        popupContent += "<label for='email'>Email:</label><br>";
-        popupContent += "<input type='email' id='email' name='email' value='" + email + "'><br><br>";
-        popupContent += "<input type='button' value='Update' onclick='updateUserDetails(" + id + ")'>";
-        popupContent += "</form>";
-        popup.innerHTML = popupContent;
-        popup.style.display = "block";
-    }
-
-    function deleteUser(id) {
-        var user = document.getElementById("user" + id);
-        user.remove();
-    }
-
-    function closePopup(popupId) {
-        var popup = document.getElementById(popupId);
-        popup.style.display = "none";
-    }
-    function updateUserDetails(id) {
-        var user = document.getElementById("user" + id);
-        var firstNameInput = document.getElementById("fname").value;
-        var lastNameInput = document.getElementById("lname").value;
-        var emailInput = document.getElementById("email").value;
-
-        // Update user info in the DOM
-        user.querySelector(".user-info p:nth-child(3)").innerText = firstNameInput;
-        user.querySelector(".user-info p:nth-child(4)").innerText = lastNameInput;
-        user.querySelector(".user-info p:nth-child(5)").innerText = emailInput;
-
-        // Save updated user info to local storage
-        var userData = {
-            id: id,
-            firstName: firstNameInput,
-            lastName: lastNameInput,
-            email: emailInput
-        };
-        localStorage.setItem("user" + id, JSON.stringify(userData));
-
-        closePopup('updatePopup');
-    }
-
-    // Function to load user data from local storage
-    function loadUserData() {
-        var users = document.querySelectorAll(".user");
-        users.forEach(function(user) {
-            var userId = user.id.slice(4); 
-            var userData = localStorage.getItem("user" + userId);
-            if (userData) {
-                userData = JSON.parse(userData);
-                user.querySelector(".user-info p:nth-child(3)").innerText = userData.firstName;
-                user.querySelector(".user-info p:nth-child(4)").innerText = userData.lastName;
-                user.querySelector(".user-info p:nth-child(5)").innerText = userData.email;
-            }
+    viewButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const userInfo = this.parentElement.previousElementSibling.querySelector('.details').innerHTML;
+            popupContent.innerHTML = `<p>${userInfo}</p>`;
+            popup.style.display = 'block';
+            overlay.style.display = 'block';
         });
+    });
+
+    updateButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const userInfo = this.parentElement.previousElementSibling.querySelector('.details');
+            const inputs = `
+            <style>
+    /* Styles for dynamically generated update form */
+    .update-input[type="text"],
+    .update-input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    .update-button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .update-button:hover {
+        background-color: #45a049;
+    }
+</style>
+                <input type="text" class="update-input" id="first-name" placeholder="First Name" value="${userInfo.querySelector('.first-name').textContent}">
+                <input type="text" class="update-input" id="last-name" placeholder="Last Name" value="${userInfo.querySelector('.last-name').textContent}">
+                <input type="email" class="update-input" id="email" placeholder="Email" value="${userInfo.querySelector('.email').textContent}">
+                <button class="update-button">Update</button>
+            `;
+            popupContent.innerHTML = inputs;
+            popup.style.display = 'block';
+            overlay.style.display = 'block';
+
+            const updateButton = popupContent.querySelector('.update-button');
+            const updateInputs = popupContent.querySelectorAll('.update-input');
+
+            updateButton.addEventListener('click', function () {
+                userInfo.querySelector('.first-name').textContent = updateInputs[0].value;
+                userInfo.querySelector('.last-name').textContent = updateInputs[1].value;
+                userInfo.querySelector('.email').textContent = updateInputs[2].value;
+                closePopup();
+            });
+        });
+    });
+
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const user = this.parentElement.parentElement;
+            user.remove();
+        });
+    });
+
+    document.querySelector('.close').addEventListener('click', closePopup);
+    function closePopup() {
+        popup.style.display = 'none';
+        overlay.style.display = 'none';
     }
 
-    // Call loadUserData when the page loads
-    window.addEventListener("load", loadUserData);
 
-    function addUser() {
-        var userId = getNextUserId();
 
-        // Create a new user element
-        var newUser = document.createElement("div");
-        newUser.className = "user";
-        newUser.id = "user" + userId;
-        
-        // Example user info, replace with actual data
-        var userInfo = "<div class='user-info'>";
-        userInfo += "<p>Id: " + userId + "</p>";
-        userInfo += "<p>Profile: <img src='default_profile_photo.jpg' alt='Profile Photo'></p>";
-        userInfo += "<p>First Name: New</p>";
-        userInfo += "<p>Last Name: User</p>";
-        userInfo += "<p>Email: newuser@example.com</p>";
-        userInfo += "<p>Status: User</p>";
-        userInfo += "</div>";
 
-        // User actions buttons
-        var userActions = "<div class='user-actions'>";
-        userActions += "<button onclick='viewUser(" + userId + ")'>View</button>";
-        userActions += "<button onclick='updateUser(" + userId + ")'>Update</button>";
-        userActions += "<button onclick='deleteUser(" + userId + ")'>Delete</button>";
-        userActions += "</div>";
+ // Form submission handling
+ document.getElementById('signup-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission behavior
 
-        newUser.innerHTML = userInfo + userActions;
+    const formData = new FormData(this); // Get form data
+    fetch('http://localhost:3000/api/user/signup', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        }
+        throw new Error('Signup failed');
+    })
+    .then(data => {
+        // Signup successful, create user entry in UI
+        createUserEntry(data.firstName, data.lastName, data.email);
+    })
+    .catch(error => {
+        console.error('Signup error:', error);
+        // Handle signup error (display error message, etc.)
+    });
+});
 
-        // Append the new user to the container
-        var userContainer = document.querySelector(".user-container");
-        userContainer.appendChild(newUser);
-    }
+// Function to dynamically create a new user entry in UI
+function createUserEntry(firstName, lastName, email) {
+    const container = document.querySelector('.container');
+
+    // Create user HTML structure
+    const userDiv = document.createElement('div');
+    userDiv.classList.add('user');
+
+    const userInfoDiv = document.createElement('div');
+    userInfoDiv.classList.add('user-info');
+    userInfoDiv.innerHTML = `
+        <img src="/User-Dashboard/Images/home.jpg" alt="User Photo">
+        <div class="details">
+            <p><span class="user-id">1</span></p>
+            <p><span class="first-name">${firstName}</span></p>
+            <p><span class="last-name">${lastName}</span></p>
+            <p><span class="email">${email}</span></p>
+            <p><span class="status">User</span></p>
+        </div>
+    `;
+
+    const actionsDiv = document.createElement('div');
+    actionsDiv.classList.add('actions');
+    actionsDiv.innerHTML = `
+        <button class="view-btn">View</button>
+        <button class="update-btn">Update</button>
+        <button class="delete-btn">Delete</button>
+    `;
+
+    userDiv.appendChild(userInfoDiv);
+    userDiv.appendChild(actionsDiv);
+
+    container.appendChild(userDiv); // Append the new user entry to the container
+}
+
+
+
+
+
+
+
+
+
 });
