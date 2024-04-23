@@ -5,15 +5,17 @@
      <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <title>MY Brand Gabriel DUSHIME</title>
         <link rel="stylesheet" href="/Admin-Dashboard/Blogs/BlogDashboard.css">
         <script src="/Admin-Dashboard/Blogs/BlogDashboard.js"></script>
+        <script src="/Admin-Dashboard/Blogs/AddingBlog.js"></script>
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
         <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" crossorigin="anonymous"></script>
+
+
        
     </head>
     <body>
@@ -42,18 +44,25 @@
             <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
         </header>
-    
-        <div class="card" >
-            <img src="/Admin-Dashboard/Images/Blog a.jpg" alt="Blog Post Image">
-            <h2>Software Development</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac justo id libero tincidunt aliquet.</p>
-            <a href="./AddingBlog.html">Read More</a>
-            
+        
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="/User-Dashboard/Images/Blog a.jpg" alt="Avatar" style="width:300px;height:200px;">
+                </div>
+                <div class="flip-card-back">
+                    <img src="/User-Dashboard/Images/Blog a.jpg" alt="Avatar" style="width:300px;height:200px;">
+                <h2>Blog Title</h2>
+                <p>Lorem ipsum dolord sit amet, consectetur adipiscing elit. Sed ac justo id libero tincidunt aliquet.</p>
+                <p id="p"><a href="/User-Dashboard/Blogs/Blogs Html/Card1.html" >Read More</a></p>
+                </div> 
+            </div>
         </div>
+        <div id="blog-container"></div>
        
         <div class="add-blog">
             <a href="./AddingBlog.html"><input type="button" value="Add Blog+" id="blog"></a><br><br>
         </div>
-     
+      
     </body>    
 </html>

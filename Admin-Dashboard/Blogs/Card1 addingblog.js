@@ -1,66 +1,80 @@
-/*Side Navigation*/
-function openNav()
-{
+function openNav() {
     document.getElementById("mySidenav").style.width = "118px";
-}
-
-function closeNav() 
-{
-   document.getElementById("mySidenav").style.width = "0";
-}
-
-/*Copyright*/
-document.getElementById("current-year").textContent = new Date().getFullYear();
-
-
-/*Comment section*/
-document.addEventListener("DOMContentLoaded", function() {
-    const commentForm = document.getElementById("commentForm");
-    const commentText = document.getElementById("commentText");
-    const commentsList = document.getElementById("comments");
-
-    let commentsArray = [];
-
-    // Function to render comments
-    function renderComments() {
-        commentsList.innerHTML = "";
-        commentsArray.forEach((comment, index) => {
-            const li = document.createElement("li");
-            li.classList.add("comment");
-            li.innerHTML = `
-                <div>${comment.text}</div>
-                <button class="edit-btn" onclick="editComment(${index})">Edit</button>
-                <button class="delete-btn" onclick="deleteComment(${index})">Delete</button>
-            `;
-            commentsList.appendChild(li);
-        });
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  
+  // Form Validation
+  function validateForm() {
+    var isValid = true;
+  
+    // Validate Name
+    var name = document.getElementById("name").value;
+    if (name.trim() === "") {
+      document.getElementById("username-error").style.display = "inline";
+      isValid = false;
+    } else {
+      document.getElementById("username-error").style.display = "none";
     }
+  
+    // Validate Email
+    var email = document.getElementById("email").value;
+    if (email.trim() === "") {
+      document.getElementById("email-error").style.display = "inline";
+      isValid = false;
+    } else {
+      document.getElementById("email-error").style.display = "none";
+    }
+  
+    // Validate Message
+    var message = document.getElementById("message").value;
+    if (message.trim() === "") {
+      document.getElementById("message-error").style.display = "inline";
+      isValid = false;
+    } else {
+      document.getElementById("message-error").style.display = "none";
+    }
+  }
 
-    // Function to add comment
-    commentForm.addEventListener("submit", function(event) {
-        event.preventDefault();
-        const commentTextValue = commentText.value.trim();
-        if (commentTextValue !== "") {
-            commentsArray.push({ text: commentTextValue });
-            commentText.value = "";
-            renderComments();
-        }
-    });
+//likes and dislike
 
-    // Function to edit comment
-    window.editComment = function(index) {
-        const newText = prompt("Edit your comment:", commentsArray[index].text);
-        if (newText !== null) {
-            commentsArray[index].text = newText;
-            renderComments();
-        }
-    };
+document.addEventListener('DOMContentLoaded', function() {
 
-    // Function to delete comment
-    window.deleteComment = function(index) {
-        if (confirm("Are you sure you want to delete this comment?")) {
-            commentsArray.splice(index, 1);
-            renderComments();
-        }
-    };
+  const likeBtn = document.querySelector('.like-btn');
+  const dislikeBtn = document.querySelector('.dislike-btn');
+  const likeCount = document.querySelector('.like-count');
+  const dislikeCount = document.querySelector('.dislike-count');
+
+  
+  let likeCounter = parseInt(localStorage.getItem('likeCounter')) || 0;
+  let dislikeCounter = parseInt(localStorage.getItem('dislikeCounter')) || 0;
+
+  likeCount.textContent = likeCounter;
+  dislikeCount.textContent = dislikeCounter;
+
+  likeBtn.addEventListener('click', () => {
+      if (likeBtn.classList.contains('active')) {
+          likeCounter--;
+          likeBtn.classList.remove('active');
+      } else {
+          likeCounter++;
+          likeBtn.classList.add('active');
+      }
+      likeCount.textContent = likeCounter;
+      localStorage.setItem('likeCounter', likeCounter);
+  });
+
+  dislikeBtn.addEventListener('click', () => {
+      if (dislikeBtn.classList.contains('active')) {
+          dislikeCounter--;
+          dislikeBtn.classList.remove('active');
+      } else {
+          dislikeCounter++;
+          dislikeBtn.classList.add('active');
+      }
+      dislikeCount.textContent = dislikeCounter;
+      localStorage.setItem('dislikeCounter', dislikeCounter);
+  });
 });

@@ -3,45 +3,50 @@
    <head>
     <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>MY Brand Gabriel DUSHIME</title>
-        <link rel="stylesheet" href="./Card1 addindblog.css">
-        <script src="./Card1 addingblog.js"></script>
+        <link rel="stylesheet" href="/Admin-Dashboard/Blogs/Card1 addindblog.css">
+        <script src="/Admin-Dashboard/Blogs/Card1 addingblog.js"></script>
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     </head>
     <body>
         <header>
             <figure class="logo">
-                <img src="./Images/New logo.jpg" alt="My Logo" height="35" width="25">
+                <img src="/Admin-Dashboard/Images/New logo.jpg" alt="My Logo" height="35" width="25">
             </figure>
             <div class="nav">
                 <ul >
-                    <li><a href="/Admin-Dashboard/Other-Pages/Dashboard.html">Home</a></li>
-                    <li><a href="/Admin-Dashboard/Other-Pages/Users.html">Users</a></li>
-                    <li><a href="/Admin-Dashboard/Other-Pages/Message.html">Messages</a></li>
-                    <li><a href="/Admin-Dashboard/Blogs/BlogDashboard.html">Blogs</a></li>
-                    <li> <a href="/Admin-Dashboard/Other-Pages/Portifoliodashboard.html">Portofolio</a></li> 
+                    <li><a href="/Home.html">Home</a></li>
+                    <li><a href="/User-Dashboard/Pages/Html Pages/About.html">About Me</a></li>
+                    <li><a href="/User-Dashboard/Pages/Html Pages/contact.html">Contact Me</a></li>
+                    <li><a href="/User-Dashboard/Pages/Html Pages/Skills.html">Skills</a></li>
+                    <li><a href="/User-Dashboard/Blogs/Blogs Html/Blogs.html">Blogs</a></li>
+                    <li><a href="/User-Dashboard/Pages/Html Pages/Portofolio.html">Portofolio</a></li> 
                 </ul>
             </div> 
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="/Admin-Dashboard/Other-Pages/Dashboard.html">Home</a>
-                <a href="/Admin-Dashboard/Other-Pages/Users.html">Users</a>
-                <a href="/Admin-Dashboard/Other-Pages/Message.html">Messages</a>
-                <a href="/Admin-Dashboard/Blogs/BlogDashboard.html">Blogs</a>
-                <a href="/Admin-Dashboard/Other-Pages/Portifoliodashboard.html">Portofolio</a>
+                <a href="/Home.html">Home</a></li>
+                <a href="/User-Dashboard/Pages/Html Pages/About.html">About Me</a>
+                <a href="/User-Dashboard/Pages/Html Pages/contact.html">Contact Me</a>
+                <a href="/User-Dashboard/Pages/Html Pages/Skills.html">Skills</a>
+                <a href="/User-Dashboard/Blogs/Blogs Html/Blogs.html">Blogs</a>
+                <a href="/User-Dashboard/Pages/Html Pages/Portofolio.html">Portofolio</a>
+                
 
             </div>
             <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
         </header>
-        
-       <h2  id="h2"><u>Lorem ipsum dolor sit amet, consectetur adipiscing elit</u></h2>
+      
         <div class="read-more">
             <div class="content">
-                
+                  
+       <h2  id="h2"><u>Lorem ipsum dolor sit amet.</u></h2>
                <p>
                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -93,11 +98,13 @@
                </p> 
             </div>
             <div class="card">
-                <img src="./Images/Blog a.jpg" alt="Blog Post Image" width="350px" height="200ppx">
+                <img src="/User-Dashboard/Images/Blog a.jpg" alt="Blog Post Image" width="350px" height="200px">
                 <h2>Software Development</h2>
-                <p id="delete">Delete</p>
-                <p id="update"></p>
-        </div>
+                <button class="like-btn">👍 <p class="like-count">0</p></button>
+                <button class="dislike-btn">👎<p class="dislike-count">0</p></button>
+            </div>
+            
+       </div>
             <div class="form">
            
                 <form name="contact-form" action="/submit" onsubmit="return validateForm()"method="post">
@@ -117,9 +124,38 @@
     
                 </form>
             </div>
-        </div>
-
+        </div>  
        
-       
+        <footer>
+            <div class="footer">
+               <div class="quicklink">
+                  <h><u>Quick Links</u></h>
+                  <ul>
+                      <li id="1"><a href="./Home.html" >Home</a></li>   
+                      <li id="2"><a href="/User-Dashboard/Pages/Html Pages/About.html" >About Me</a></li>  
+                      <li id="3"><a href="/User-Dashboard/Pages/Html Pages/contact.html" >Contact Me</a></li>
+                      <li id="4"><a href="/User-Dashboard/Pages/Html Pages/Portofolio.html" >Portofolio</a></li>    
+                  </ul>
+                </div>
+                  <div class="contact">
+                      <h><u>Contacts</u></h>
+                      <p >Tel:+250783447260</p>
+                      <p >E-mail:dushimegabriel@gmail.com</p>
+                  </div>
+                  <div class="copyright">
+  
+                  </div>
+                  <div class="social">
+                      <h><u>Reach Out To Me</u></h><br>
+                      <a href="https://app.slack.com/client/TRLV27SKH/CRK3S017S"  class="fa fa-slack"id="slack" ></a>
+                      <a href="https://www.linkedin.com/in/gabriel-dushime-b0589325a/" class="fa fa-linkedin"id="linkidin"></a>
+                      <a href="https://github.com/GabrielDushime" class="fa fa-github" id="Github" ></a>
+                      <a href="https://www.facebook.com/profile.php?id=61556627968779"  class="fa fa-facebook" id="facebook"></a>
+                      <a href="https://www.instagram.com/gabriel.dushime/" class="fa fa-instagram" id="Instagram" ></a>
+                      <a href="https://twitter.com/RealGabzzzz7"  class="fa fa-twitter" id="Twitter"></a>
+                  </div>
+              
+              </div>
+          </footer>
     </body>    
 </html>

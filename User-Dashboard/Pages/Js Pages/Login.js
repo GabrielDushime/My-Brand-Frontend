@@ -54,7 +54,7 @@ async function loginUser() {
 
        
         if (user.role === 'admin') {
-            window.location.href = 'https://my-brand-gabriel-frontend.netlify.app/admin-dashboard/other-pages/dashboard';
+            window.location.href = 'http://127.0.0.1:5502/Admin-Dashboard/Other-Pages/Dashboard.html';
         } else {
             window.location.href = 'https://my-brand-gabriel-frontend.netlify.app/user-dashboard/pages/html%20pages/userdashboard';
         }

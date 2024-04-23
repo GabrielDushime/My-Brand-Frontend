@@ -59,69 +59,90 @@ header{
     font-size:20px;
     color: #F04A00;
 }
-/* .nav a:after{
-content:"";
-position: absolute;
-background-color: chocolate;
-height: 3px;
-width:0;
-left:0;
-bottom:-5px;
-transition:0.3s;
-}
-.nav a:hover:after{
-    width:100%;
-} */
 
-
-.card {
-    background-color: #ffffff;
-    border-radius:20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    flex: 1; 
-    max-width: 300px; 
-    height:350px;
-}
-.card h2{
-    font-family: poppins;
-}
-.card p{
-    font-family: poppins;
-    margin:0 10px 0 10px;
-}
-.card a{
-    position: absolute;
-    color:#4D5D53;
-    font-family: poppins;
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height:200px;
+    perspective: 1000px;
+    cursor:pointer;
+    display: flex;
+    padding-left:20px;
+    margin-top: 10px;
+  }
+  .flip-card img{
+    border-radius: 30px;
+    height: 100px;
+  }
+  
+  .flip-card-inner {
+    position:relative;
+    width: 100%;
+    height: 100%;
     text-align: center;
-    left:120px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: font-size 1s;
-}
-.card a:hover{
-  color: #F04A00;
-  font-size: 20px;
- 
-}
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius:20px 20px 0 0;
-}
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius:30px;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color:#555;
+    color: white;
+    transform: rotateY(180deg);
+    height:332px;
+    background-color: #043434;
+    width: 300px;
+    margin-left:-20px;
+  
+  }
+  .flip-card-back img{
+    border-radius: 30px 30px 0 0;
+  }
+  
+  .flip-card-back h2{
+    color:white;
+    font-family: poppins;
+    margin-top:0px;
+    
+      }
+      .flip-card-back a{
+        color:#04ec64;
+        text-decoration:none;
+        font-family: poppins;
+        font-size:15px;
+        transition:font-size 1s;
+        
+        
+      
+      } 
+      .flip-card-back p{
+        font-family: poppins;
+       
+      } 
 
-h2 {
-    font-size: 1.5rem;
-    margin: 10px 0;
-}
 
-p {
-    font-size: 1rem;
-    color: #555;
-}
-.card a{
-    font-size:15px;
+  .flip-card-back a:hover{
+    font-size:20px;
+    font-weight: bold;
+    color: #00BFFF;
 }
 
 
@@ -139,7 +160,8 @@ p {
     font-weight: bold;
     font-family:poppins;
     cursor: pointer;
-   transition: font-size 1s;
+    transition: font-size 1s;
+    bottom: 10px;
  
 
 
@@ -149,3 +171,4 @@ p {
         font-size:20px;
       
 }
+

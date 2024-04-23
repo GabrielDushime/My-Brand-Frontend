@@ -1,45 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contact-form');
-    const popup = document.getElementById('popup');
-    const closePopupBtn = document.getElementById('close-popup');
-  
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); 
-        const formData = new FormData(form); 
-  
-        const formDataObj = {};
-        formData.forEach((value, key) => {
-            formDataObj[key] = value;
-        });
-  
-        fetch(form.action, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formDataObj),
-        })
-        .then(response => {
-            if (response.ok) {
-                form.reset();
-                popup.classList.add('active');
-                // Assuming the server responds with the new message data
-                return response.json();
-            } else {
-                throw new Error('Network response was not ok');
-            }
-        })
-       
-        .catch(error => console.error('Error:', error));
-    });
-  
-    closePopupBtn.addEventListener('click', function() {
-        popup.classList.remove('active'); 
-    });
-  
-  });
-  
-  function openNav() {
+function openNav() {
     document.getElementById("mySidenav").style.width = "118px";
   }
   
@@ -78,3 +37,44 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById("message-error").style.display = "none";
     }
   }
+
+//likes and dislike
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  const likeBtn = document.querySelector('.like-btn');
+  const dislikeBtn = document.querySelector('.dislike-btn');
+  const likeCount = document.querySelector('.like-count');
+  const dislikeCount = document.querySelector('.dislike-count');
+
+  
+  let likeCounter = parseInt(localStorage.getItem('likeCounter')) || 0;
+  let dislikeCounter = parseInt(localStorage.getItem('dislikeCounter')) || 0;
+
+  likeCount.textContent = likeCounter;
+  dislikeCount.textContent = dislikeCounter;
+
+  likeBtn.addEventListener('click', () => {
+      if (likeBtn.classList.contains('active')) {
+          likeCounter--;
+          likeBtn.classList.remove('active');
+      } else {
+          likeCounter++;
+          likeBtn.classList.add('active');
+      }
+      likeCount.textContent = likeCounter;
+      localStorage.setItem('likeCounter', likeCounter);
+  });
+
+  dislikeBtn.addEventListener('click', () => {
+      if (dislikeBtn.classList.contains('active')) {
+          dislikeCounter--;
+          dislikeBtn.classList.remove('active');
+      } else {
+          dislikeCounter++;
+          dislikeBtn.classList.add('active');
+      }
+      dislikeCount.textContent = dislikeCounter;
+      localStorage.setItem('dislikeCounter', dislikeCounter);
+  });
+});
