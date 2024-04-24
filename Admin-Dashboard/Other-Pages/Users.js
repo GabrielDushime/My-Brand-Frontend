@@ -81,10 +81,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
  // Form submission handling
  document.getElementById('signup-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission behavior
+    event.preventDefault(); 
 
-    const formData = new FormData(this); // Get form data
-    fetch('http://localhost:3000/api/user/signup', {
+    const formData = new FormData(this); 
+    fetch('https://my-brand-backend-heoy.onrender.com/api/user/signup', {
         method: 'POST',
         body: formData
     })
@@ -95,20 +95,20 @@ document.addEventListener('DOMContentLoaded', function () {
         throw new Error('Signup failed');
     })
     .then(data => {
-        // Signup successful, create user entry in UI
+        
         createUserEntry(data.firstName, data.lastName, data.email);
     })
     .catch(error => {
         console.error('Signup error:', error);
-        // Handle signup error (display error message, etc.)
+       
     });
 });
 
-// Function to dynamically create a new user entry in UI
+
 function createUserEntry(firstName, lastName, email) {
     const container = document.querySelector('.container');
 
-    // Create user HTML structure
+    
     const userDiv = document.createElement('div');
     userDiv.classList.add('user');
 
@@ -136,7 +136,7 @@ function createUserEntry(firstName, lastName, email) {
     userDiv.appendChild(userInfoDiv);
     userDiv.appendChild(actionsDiv);
 
-    container.appendChild(userDiv); // Append the new user entry to the container
+    container.appendChild(userDiv); 
 }
 
 
