@@ -78,3 +78,25 @@ document.addEventListener('DOMContentLoaded', function() {
       localStorage.setItem('dislikeCounter', dislikeCounter);
   });
 });
+
+
+
+window.addEventListener("DOMContentLoaded",async()=>{
+  // alert("working")
+  const params=new URLSearchParams(window.location.search);
+  const blogId=params.get("id")
+
+  const blog=await fetch(`http://localhost:3000/api/blog/${blogId}`,
+  {method:"GET",
+  Headers:{
+      "content-Type":"Application/json"
+  }});
+
+  const response=await blog.json();
+  console.log(response)
+
+});
+
+
+
+
