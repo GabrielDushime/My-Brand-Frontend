@@ -399,5 +399,11 @@ footer h, footer a {
         }
     
     }
-    
+    .blogs{
+        display: flex;
+        flex-direction: column;
+        margin-top:10px;
+        justify-content: space-between;
+        gap:80px
+    }
     
