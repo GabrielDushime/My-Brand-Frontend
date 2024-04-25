@@ -74,9 +74,15 @@ header{
     
     
   }
-  .flip-card img{
+  .flip-card-front img{
     border-radius: 30px;
-    height: 100px;
+    height: 100%;
+    width: 100%;
+  }
+  .flip-card-back img{
+    border-radius: 30px;
+    height: 250px;
+    width: 100%;
   }
   
   .flip-card-inner {

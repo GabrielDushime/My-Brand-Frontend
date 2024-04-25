@@ -34,10 +34,10 @@ Headers:{
     blogCont.innerHTML=`
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src="https://res.cloudinary.com/dp2bnr5yi/image/upload/v1713718610/vrnpmsnnqj0joerrdlie.png" alt="Avatar" style="width:300px;height:200px;">
+      <img src="${blog.image}">
       </div>
       <div class="flip-card-back">
-          <img src="https://res.cloudinary.com/dp2bnr5yi/image/upload/v1713718610/vrnpmsnnqj0joerrdlie.png" alt="Avatar" style="width:300px;height:200px;">
+          <img src="${blog.image}">
       <h2>${blog.title}</h2>
       <p>${blog.description}</p>
       <p id="p"><a href="/User-Dashboard/Blogs/Blogs Html/Card1.html?id="${blog._id}" id="read-more">Read More</a></p>
