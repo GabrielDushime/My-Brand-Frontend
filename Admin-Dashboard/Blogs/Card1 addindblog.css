@@ -119,8 +119,8 @@ button{
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    top:480px;
-    right:20px;
+    top:250px;
+    left: 50px;
 
 
     
@@ -257,7 +257,7 @@ button{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: -20px;
+    margin-top: 350px;
 }
 
 .footer .quicklink ul {

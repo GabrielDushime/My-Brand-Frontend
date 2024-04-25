@@ -81,10 +81,33 @@ header{
   }
   .flip-card-back img{
     border-radius: 30px;
-    height: 250px;
+    height: 200px;
     width: 100%;
   }
-  
+  .actions button {
+    margin-top: 10px;
+    border: 0px;
+    height:20px;
+    width: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    
+  }
+  .update-btn{
+    background-color: #04ec64;
+    color: white;
+    font-weight:bold;
+  }
+  .delete-btn{
+    background-color: red;
+    color: white;
+    font-weight:bold;
+    margin-left: 20px;
+  }
+  .delete-btn :hover{
+    background-color: #F04A00;
+  }
   .flip-card-inner {
     position:relative;
     width: 100%;

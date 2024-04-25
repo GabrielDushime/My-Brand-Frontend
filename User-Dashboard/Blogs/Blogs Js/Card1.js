@@ -37,7 +37,6 @@ function openNav() {
       document.getElementById("message-error").style.display = "none";
     }
   }
-
 //likes and dislike
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -85,7 +84,7 @@ window.addEventListener("DOMContentLoaded",async()=>{
   const params=new URLSearchParams(window.location.search);
   const blogId=params.get("id")
 
-  const blog=await fetch(`http://localhost:3000/api/blog/${blogId}`,
+  const blog=await fetch(`https://my-brand-backend-heoy.onrender.com/api/blog/${blogId}`,
   {method:"GET",
   Headers:{
       "content-Type":"Application/json"
@@ -93,5 +92,26 @@ window.addEventListener("DOMContentLoaded",async()=>{
 
   const response=await blog.json();
   console.log(response)
+  let readmoreBlogContainer=document.querySelector(".read-more")
+  readmoreBlogContainer.innerHTML=`
+  <div class="content">
+                  
+  <h2  id="h2"><u>${response[0].title}</u></h2>
+          <p>
+          ${response[0].description}  
+          </p>
+          
+       </div>
+       <div class="card">
+           <img src="${response[0].image}" width="350px" height="200px">
+           <h2>Software Development</h2>
+           <button class="like-btn">👍 <p class="like-count">0</p></button>
+           <button class="dislike-btn">👎<p class="dislike-count">0</p></button>
+       </div>
+  
+  `
+
+
+
 
 });
